@@ -4,7 +4,7 @@ You can use the [editor on GitHub](https://github.com/fyohannes/Data_Elections/e
 
 Whenever you commit to this repository, GitHub Pages will run [Jekyll](https://jekyllrb.com/) to rebuild the pages in your site, from the content in your Markdown files.
 
-[02.Welcome Page] (WelcomePage.md)
+[01.Welcome Page](WelcomePage.md)
 
 [02.Introduction](intro.md)
 
