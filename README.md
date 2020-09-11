@@ -4,6 +4,12 @@ You can use the [editor on GitHub](https://github.com/fyohannes/Data_Elections/e
 
 Whenever you commit to this repository, GitHub Pages will run [Jekyll](https://jekyllrb.com/) to rebuild the pages in your site, from the content in your Markdown files.
 
+[02.Welcome Page] (WelcomePage.md)
+
+[02.Introduction](intro.md)
+
+
+
 ### Markdown
 
 Markdown is a lightweight and easy-to-use syntax for styling your writing. It includes conventions for
@@ -20,17 +26,17 @@ Syntax highlighted code block
 
 Historical data
 
-![image](image/PV_historical.png)
+![Image](image/PV_historical.png)
 
 
 
 Intersting Swing States
 
-![image](PV_southern_states_historical.png)
+![Image](PV_southern_states_historical.png)
 
-![image](PV_midwest_states_historical.png)
+![Image](PV_midwest_states_historical.png)
 
-![image](PV_coast_states_historical.png)
+![Image](PV_coast_states_historical.png)
 
 This data was recieved from [Link] (https://www.politico.com/news/2020/09/08/swing-states-2020-presidential-election-409000)
 
