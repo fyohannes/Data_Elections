@@ -15,17 +15,17 @@ Syntax highlighted code block
 
 Historical data
 
-Image[PV_historical.png] 
+![](PV_historical.png)
 
 
 
 Intersting Swing States
 
-Image[PV_southern_states_historical.png]
+![](PV_southern_states_historical.png)
 
-Image[PV_midwest_states_historical.png]
+![](PV_midwest_states_historical.png)
 
-Image[PV_coast_states_historical.png]
+![](PV_coast_states_historical.png)
 
 ## Header 2
 ### Header 3
