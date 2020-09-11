@@ -11,7 +11,27 @@ Markdown is a lightweight and easy-to-use syntax for styling your writing. It in
 ```markdown
 Syntax highlighted code block
 
-# Header 1
+# Welcome Page
+
+
+
+# Introduction
+
+Historical data
+
+![](PV_historical.png)
+
+
+
+Intersting Swing States
+
+![](PV_southern_states_historical.png)
+
+![](PV_midwest_states_historical.png)
+
+![](PV_coast_states_historical.png)
+
+
 ## Header 2
 ### Header 3
 
