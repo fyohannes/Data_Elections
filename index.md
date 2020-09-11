@@ -17,7 +17,7 @@ Syntax highlighted code block
 
 
 
-# Introduction
+## Introduction
 
 Historical data
 
@@ -27,14 +27,16 @@ Historical data
 
 Intersting Swing States
 
-![](PV_southern_states_historical.png)
+![](image/PV_southern_states_historical.png)
 
-![](PV_midwest_states_historical.png)
+![](image/PV_midwest_states_historical.png)
 
-![](PV_coast_states_historical.png)
+![](image/PV_coast_states_historical.png)
 
-## Header 2
-### Header 3
+  This data was recieved from [](https://www.politico.com/news/2020/09/08/swing-states-2020-presidential-election-409000)
+
+### Header 2
+#### Header 3
 
 - Bulleted
 - List
