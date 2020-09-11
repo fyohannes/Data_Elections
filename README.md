@@ -20,7 +20,7 @@ Syntax highlighted code block
 
 Historical data
 
-![](image/PV_historical.png)
+![image](image/PV_historical.png)
 
 
 
@@ -32,7 +32,7 @@ Intersting Swing States
 
 ![image](PV_coast_states_historical.png)
 
-This data was recieved from (https://www.politico.com/news/2020/09/08/swing-states-2020-presidential-election-409000)
+This data was recieved from [Link] (https://www.politico.com/news/2020/09/08/swing-states-2020-presidential-election-409000)
 
 
 ### Header 2
@@ -53,10 +53,3 @@ This data was recieved from (https://www.politico.com/news/2020/09/08/swing-stat
 
 For more details see [GitHub Flavored Markdown](https://guides.github.com/features/mastering-markdown/).
 
-### Jekyll Themes
-
-Your Pages site will use the layout and styles from the Jekyll theme you have selected in your [repository settings](https://github.com/fyohannes/Data_Elections/settings). The name of this theme is saved in the Jekyll `_config.yml` configuration file.
-
-### Support or Contact
-
-Having trouble with Pages? Check out our [documentation](https://docs.github.com/categories/github-pages-basics/) or [contact support](https://github.com/contact) and we’ll help you sort it out.
