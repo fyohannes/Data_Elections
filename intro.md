@@ -11,7 +11,7 @@ Presidential Elections in the United States are determined by the electoral coll
 
 As we can see from the graph above, elections are quite competitive. Over the last 68 years, the average popular vote margin has been around 8.3 percent. Throughout this time, only 7 out of the 18 elections have had a presidential candidate win by a margin of more than 8.3 percent. Most notably, since the 2000 election, presidential elections have been really close races. The majority of these races have stayed between a margin vote share of 0.5 and 4 percentage points, with the exception of 2008, where Barrack Obama won by a margin of 7 percent. 
 
-![Historical Popular Vote Share](/image/PV_historical.png)
+![Historical Popular Vote Share](PV_historical.png)
 
 
 
