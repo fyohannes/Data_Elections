@@ -305,64 +305,35 @@ pv_margins_map <- popvote_bystander %>%
     left_join(states_map, by = "region") %>%
     mutate(win_margin = (R_pv2p-D_pv2p))
 
-ggplot(pv_margins_map, aes(long, lat, group = group)) +
+map <- ggplot(pv_margins_map, aes(long, lat, group = group)) +
     geom_polygon(aes(fill = win_margin), color = "black") +
     scale_fill_gradient2(
-      high = "red", 
-      #mid = scales::muted("purple"), ##TODO: purple or white better?
+      high = "red2", 
       mid = "white",
       name = "win margin",
-      low = "blue", 
+      low = "dodgerblue2", 
       breaks = c(-50,-25,0,25,50), 
       limits=c(-50,50)
     ) +
     theme_void()
 
+# Adding state abbreivations 
+
+centroids <- data.frame(region=tolower(state.name), long=state.center$x, lat=state.center$y)
+centroids$abb<-state.abb[match(centroids$region,tolower(state.name))]
+
+map2 <- map + with(centroids, 
+       annotate(geom="text", x = long, y=lat, label = abb, 
+                size = 3,color="black",family="Times")
+      )
+
+
+ggsave("Intro_Map.png", height = 3, width = 8)
+
+
 ```
 
 ```{r}
 
-
-####----------------------------------------------------------#
-#### Extra: FiveThirtyEight replication in ggplot2 ####
-#### https://projects.fivethirtyeight.com/swing-states-2020-election/
-####----------------------------------------------------------#
-
-popvote_bystander$vote_margin <- popvote_bystander$R_pv2p - popvote_bystander$D_pv2p
-
-pvstate_df %>% 
-  ## subset data
-  filter(state %in% c("Arizona","Georgia","Texas")) %>%
-  filter(year >= 2000) %>%
-  ## pipe into ggplot()
-  ggplot(aes(x=year, y=vote_margin, color=vote_margin)) + 
-  ## specify a grid by state
-  facet_wrap(. ~ state) + 
-  ## add plot elements
-  geom_hline(yintercept=0,color="gray") +
-  geom_line(size=2) + 
-  geom_point(size=6) +
-  ## specify scale colors
-  scale_colour_gradient(low = "blue", high = "red") +
-  scale_fill_gradient(low = "blue", high = "red") +
-  ## specify titles, labels
-  xlab("") +
-  ylab("Republican vote-share margin") + 
-  ggtitle("Swing states that moved sharply to the left in 2016") +
-  ## switch position of x-axis and y-axis
-  coord_flip() +
-  ## make x-axis (year) run from top to bottom
-  scale_x_reverse(breaks=unique(pvstate_df$year)) +
-  theme_minimal() + 
-    theme(
-        panel.border = element_blank(),
-        plot.title = element_text(size = 20, hjust = 0.5, face="bold"), 
-        legend.position = "none",
-        axis.title = element_text(size=18),
-        axis.text.x = element_text(angle = 45, hjust = 1),
-        axis.text = element_text(size = 18),
-        strip.text = element_text(size = 18, face = "bold"))
-
-```
 
 
