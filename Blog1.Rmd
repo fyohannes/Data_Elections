@@ -1,0 +1,368 @@
+---
+title: "Blog 1 Data"
+author: "Feven Yohannes"
+date: "September 11, 2020"
+output: html_document
+---
+```{r setup, include=FALSE}
+knitr::opts_chunk$set(echo = FALSE)
+
+library(readr)
+library(tidyr)
+library(ggplot2)
+library(dplyr)
+library(maps)
+library(cowplot)
+library(tidyverse)
+
+```
+
+```{r, Downloading data}
+
+ # Readig in data 1
+
+popvote_bystander <- read_csv("popvote_bystate_1948-2016.csv",col_types = cols(
+  state = col_character(),
+  year = col_double(),
+  total = col_double(),
+  D = col_double(),
+  R = col_double(),
+  R_pv2p = col_double(),
+  D_pv2p = col_double()
+))
+
+ # Reading in data 2
+
+popvote <- read_csv("popvote_1948-2016.csv",col_types = cols(
+  year = col_double(),
+  party = col_character(),
+  winner = col_logical(),
+  candidate = col_character(),
+  pv = col_double(),
+  pv2p = col_double(),
+  incumbent = col_logical(),
+  incumbent_party = col_logical(),
+  prev_admin = col_logical()
+))
+```
+
+```{r, Graph 1}
+
+# Making the dataframe wider
+
+popvote_wide_df <- popvote %>%
+  select(year, party, pv2p) %>%
+  spread(party, pv2p)
+
+
+  # Creating graph 1 dataframe
+
+graph1_df <- popvote_wide_df %>%
+  
+  # Create new variable to look at vote share difference
+  
+  mutate(difference = (democrat-republican),absolute_difference =abs(democrat-republican)) %>%
+
+  
+  # Mutate to get colors for graph
+  
+  mutate(Color = ifelse(difference > 0, "blue", "red")) %>%
+  
+  # Making sure there are no duplicates, while keeping all other variables
+  
+  distinct(year, .keep_all = TRUE) %>%
+  mutate(avg=mean(absolute_difference))
+  
+  
+  # Creating Graph 1
+
+  graph1_df %>%
+  ggplot(aes(x=year,y=absolute_difference,fill=Color)) +geom_col() +
+  labs(title ="Difference in National Popular Vote in Presidential Elections from 1948 to 2016",
+        subtitle="Exploring Win Margins by Democrats and Republicans",
+    x="Election Year",y= "Difference in Popular Vote (%)",
+    caption= "Caption: The election of 2000 and 2016 are instances where the \n candidate won the popular vote, but lost the election") +
+  theme(plot.title = element_text(face = "bold",size=11)) +
+    scale_fill_manual(labels=c("Democrat", "Republican"), values = c("blue", "red")) +
+    labs(fill = "Party that Won the Popular Vote")
+  
+  
+  ggsave("PV_historical.png", height = 3, width = 8)
+
+```
+
+
+
+```{r,Graphic 2}
+
+  # Arizona 
+
+Arizona <- popvote_bystander %>%
+  filter(state=="Arizona") %>%
+  
+  # Tidying Data- prep for graph 
+  
+  gather(key = party,value = party_share,D_pv2p,R_pv2p) %>%
+  
+  # Creating ggplot
+  
+  ggplot(aes(x=year,y=party_share,fill=party)) +geom_col() +
+  labs(title ="Arizona's Presidential Vote Share 1948-2016",
+    x="Election Year",y= "Percentage of Vote Share by Party") +
+  theme(axis.title.y = element_text(size=8)) +
+  theme(plot.title = element_text(face = "bold",size=8)) +
+    scale_fill_manual(labels=c("Democrat", "Republican"), values = c("blue", "red")) +
+    labs(fill = "Party") +
+  theme(legend.title = element_text(color = "gray1", size = 9.5),legend.key.width = unit(0.4,"cm"),legend.key.size = unit(0.6, "cm"))
+
+# Florida
+
+Florida <- popvote_bystander %>%
+  filter(state=="Florida") %>%
+  
+  # Tidying Data- prep for graph 
+  
+  gather(key = party,value = party_share,D_pv2p,R_pv2p) %>%
+  
+  # Creating ggplot
+  
+  ggplot(aes(x=year,y=party_share,fill=party)) +geom_col() +
+  labs(title ="Florida's Presidential Popular Vote Share 1948-2016",
+    x="Election Year",y= "Percentage of Vote Share by Party") +
+  theme(plot.title = element_text(face = "bold",size=8)) +
+  theme(axis.title.y = element_text(size=8)) +
+    scale_fill_manual(labels=c("Democrat", "Republican"), values = c("blue", "red")) +
+    labs(fill = "Party")+
+  theme(legend.title = element_text(color = "gray1", size = 9.5),legend.key.width = unit(0.4,"cm"),legend.key.size = unit(0.6, "cm"))
+
+
+# Georgia 
+
+Georgia <- popvote_bystander %>%
+  filter(state=="Georgia") %>%
+  
+  # Tidying Data- prep for graph 
+  
+  gather(key = party,value = party_share,D_pv2p,R_pv2p) %>%
+  
+  # Creating ggplot
+  
+  ggplot(aes(x=year,y=party_share,fill=party)) +geom_col() +
+  labs(title ="Georgia's Presidential Popular Vote Share 1948-2016",
+    x="Election Year",y= "Percentage of Vote Shares by Party") +
+  theme(plot.title = element_text(face = "bold",size=8)) +
+  theme(axis.title.y = element_text(size=8)) +
+    scale_fill_manual(labels=c("Democrat", "Republican"), values = c("blue", "red")) +
+    labs(fill = "Party")+
+  theme(legend.title = element_text(color = "gray1", size = 9.5),legend.key.width = unit(0.4,"cm"),legend.key.size = unit(0.6, "cm"))
+
+
+  # Michigan 
+
+Michigan <- popvote_bystander %>%
+  filter(state=="Michigan") %>%
+  
+  # Tidying Data- prep for graph 
+  
+  gather(key = party,value = party_share,D_pv2p,R_pv2p) %>%
+  
+  # Creating ggplot
+  
+  ggplot(aes(x=year,y=party_share,fill=party)) +geom_col() +
+  labs(title ="Michigan's Presidential Popular Vote Share 1948- 2016",
+    x="Election Year",y= "Percentage of Vote Shares by Party") +
+  theme(plot.title = element_text(face = "bold",size=8)) +
+  theme(axis.title.y = element_text(size=8)) +
+    scale_fill_manual(labels=c("Democrat", "Republican"), values = c("blue", "red")) +
+    labs(fill = "Party")+
+  theme(legend.title = element_text(color = "gray1", size = 9.5),legend.key.width = unit(0.4,"cm"),legend.key.size = unit(0.6, "cm"))
+
+
+  # Minnesota 
+
+Minnesota <- popvote_bystander %>%
+  filter(state=="Minnesota") %>%
+  
+  # Tidying Data- prep for graph 
+  
+  gather(key = party,value = party_share,D_pv2p,R_pv2p) %>%
+  
+  # Creating ggplot
+  
+  ggplot(aes(x=year,y=party_share,fill=party)) +geom_col() +
+  labs(title ="Minnnesota's Presidential Popular Vote Share 1948-2016",
+    x="Election Year",y= "Percentage of Vote Shares by Party") +
+  theme(plot.title = element_text(face = "bold",size=8)) +
+  theme(axis.title.y = element_text(size=8)) +
+    scale_fill_manual(labels=c("Democrat", "Republican"), values = c("blue", "red")) +
+    labs(fill = "Party")+
+  theme(legend.title = element_text(color = "gray1", size = 9.5),legend.key.width = unit(0.4,"cm"),legend.key.size = unit(0.6, "cm"))
+
+
+
+  # North Carolina 
+
+North_Carolina  <- popvote_bystander %>%
+  filter(state=="North Carolina") %>%
+  
+  # Tidying Data- prep for graph 
+  
+  gather(key = party,value = party_share,D_pv2p,R_pv2p) %>%
+  
+  # Creating ggplot
+  
+  ggplot(aes(x=year,y=party_share,fill=party)) +geom_col() +
+  labs(title ="North Carolina's Presidential Popular Vote Share 1948-2016",
+    x="Election Year",y= "Percentage of Vote Shares by Party") +
+  theme(plot.title = element_text(face = "bold",size=8)) +
+  theme(axis.title.y = element_text(size=8))+
+    scale_fill_manual(labels=c("Democrat", "Republican"), values = c("blue", "red")) +
+    labs(fill = "Party")+
+  theme(legend.title = element_text(color = "gray1", size = 9.5),legend.key.width = unit(0.4,"cm"),legend.key.size = unit(0.6, "cm"))
+
+
+
+  #Pennsylvania 
+
+Pennsylvania <- popvote_bystander %>%
+  filter(state=="Pennsylvania") %>%
+  
+  # Tidying Data- prep for graph 
+  
+  gather(key = party,value = party_share,D_pv2p,R_pv2p) %>%
+  
+  # Creating ggplot
+  
+  ggplot(aes(x=year,y=party_share,fill=party)) +geom_col() +
+  labs(title ="Pennsylavnia's Presidental Vote Share 1948-2016",
+    x="Election Year",y= "Percentage of Vote Shares by Party") +
+  theme(plot.title = element_text(face = "bold",size=8)) +
+  theme(axis.title.y = element_text(size=8))+
+    scale_fill_manual(labels=c("Democrat", "Republican"), values = c("blue", "red")) +
+    labs(fill = "Party")+
+  theme(legend.title = element_text(color = "gray1", size = 9.5),legend.key.width = unit(0.4,"cm"),legend.key.size = unit(0.6, "cm"))
+
+
+
+  # Wisconsin 
+
+Wisconsin <- popvote_bystander %>%
+  filter(state=="Wisconsin") %>%
+  
+  # Tidying Data- prep for graph 
+  
+  gather(key = party,value = party_share,D_pv2p,R_pv2p) %>%
+  
+  # Creating ggplot
+  
+  ggplot(aes(x=year,y=party_share,fill=party)) +geom_col() +
+  labs(title ="Wisconsin's Presidential Popular Vote Share 1948-2016",
+    x="Election Year",y= "Percentage of Vote Shares by Party") +
+  theme(plot.title = element_text(face = "bold",size=8)) +
+  theme(axis.title.y = element_text(size=8)) +
+    scale_fill_manual(labels=c("Democrat", "Republican"), values = c("blue", "red")) +
+    labs(fill = "Party")+
+  theme(legend.title = element_text(color = "gray1", size = 9.5),legend.key.width = unit(0.4,"cm"),legend.key.size = unit(0.6, "cm"))
+
+
+
+plot_grid(Arizona,Florida,Georgia)
+
+ggsave("PV_southern_states_historical.png", height = 3, width = 8)
+
+plot_grid(Minnesota,Wisconsin,Michigan)
+
+ggsave("PV_midwest_states_historical.png", height = 3, width = 8)
+
+plot_grid(Pennsylvania,North_Carolina)
+
+ggsave("PV_coast_states_historical.png", height = 3, width = 8)
+
+
+
+  
+  
+```
+
+```{r}
+## shapefile of states from `maps` library
+states_map <- map_data("state")
+unique(states_map$region)
+
+## read/clean/merge state pop vote
+
+
+popvote_bystander$region <- tolower(popvote_bystander$state)
+
+pv_map <- popvote_bystander %>%
+    filter(year == 2016) %>%
+    left_join(states_map, by = "region")
+
+
+## map: win-margins
+pv_margins_map <- popvote_bystander %>%
+    filter(year == 2016) %>%
+    left_join(states_map, by = "region") %>%
+    mutate(win_margin = (R_pv2p-D_pv2p))
+
+ggplot(pv_margins_map, aes(long, lat, group = group)) +
+    geom_polygon(aes(fill = win_margin), color = "black") +
+    scale_fill_gradient2(
+      high = "red", 
+      #mid = scales::muted("purple"), ##TODO: purple or white better?
+      mid = "white",
+      name = "win margin",
+      low = "blue", 
+      breaks = c(-50,-25,0,25,50), 
+      limits=c(-50,50)
+    ) +
+    theme_void()
+
+```
+
+```{r}
+
+
+####----------------------------------------------------------#
+#### Extra: FiveThirtyEight replication in ggplot2 ####
+#### https://projects.fivethirtyeight.com/swing-states-2020-election/
+####----------------------------------------------------------#
+
+popvote_bystander$vote_margin <- popvote_bystander$R_pv2p - popvote_bystander$D_pv2p
+
+pvstate_df %>% 
+  ## subset data
+  filter(state %in% c("Arizona","Georgia","Texas")) %>%
+  filter(year >= 2000) %>%
+  ## pipe into ggplot()
+  ggplot(aes(x=year, y=vote_margin, color=vote_margin)) + 
+  ## specify a grid by state
+  facet_wrap(. ~ state) + 
+  ## add plot elements
+  geom_hline(yintercept=0,color="gray") +
+  geom_line(size=2) + 
+  geom_point(size=6) +
+  ## specify scale colors
+  scale_colour_gradient(low = "blue", high = "red") +
+  scale_fill_gradient(low = "blue", high = "red") +
+  ## specify titles, labels
+  xlab("") +
+  ylab("Republican vote-share margin") + 
+  ggtitle("Swing states that moved sharply to the left in 2016") +
+  ## switch position of x-axis and y-axis
+  coord_flip() +
+  ## make x-axis (year) run from top to bottom
+  scale_x_reverse(breaks=unique(pvstate_df$year)) +
+  theme_minimal() + 
+    theme(
+        panel.border = element_blank(),
+        plot.title = element_text(size = 20, hjust = 0.5, face="bold"), 
+        legend.position = "none",
+        axis.title = element_text(size=18),
+        axis.text.x = element_text(angle = 45, hjust = 1),
+        axis.text = element_text(size = 18),
+        strip.text = element_text(size = 18, face = "bold"))
+
+```
+
+
