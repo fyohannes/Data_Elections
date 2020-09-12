@@ -4,7 +4,7 @@ September 12th 2020
 
 
 
-**Historical Popular Vote Share**
+**<font size="3"> Historical Popular Vote Share </font>**
 
 
 Presidential Elections in the United States are determined by the electoral college. While popular vote shares aren’t the method in which presidents are elected, it still provides when investigating elections, especially when there are discrepancies between the total popular vote share and the electoral college. The graph below reflects popular vote share, the difference in margin vote shares, for presidential elections from 1948-2016.
@@ -24,7 +24,10 @@ _2016 (Trump vs Clinton):_
 
 Similar to the election of 2000, 2016 was another example in which a candidate won the popular vote share, but lost the election. While Hilary Clinton won the popular vote share by 2.3 percent, ultimately, Donald Trump was elected as president. 
 
-**Swing States in 2016**
+
+
+**<font size="3"> Swing States in 2016 </font>**
+
 
 
 Given that elections are incredibly competitive, swing states have ultimately decided the outcome of elections, thus highlighting the importance of swing states, especially in the 2020 election. [Politco!](https://www.politico.com/news/2020/09/08/swing-states-2020-presidential-election-409000) reports that there are 8 states in particular that are very important to this upcoming election. These states include Arizona, Georgia, Florida, Wisconsin, Minnesota, Michigan, Pennsylvania, and North Carolina. The article reports that these states represent 123 out of the 270 electoral college votes needed to win the election. Most importantly these states shed light on some important factors in this election including race and college attainment (especially for white voters). These are all very important factors that will be explored in this blog. While they aren’t shown in the graphics below, the graphics below continue to represent the competitiveness of presidential elections. 
@@ -33,7 +36,8 @@ Given that elections are incredibly competitive, swing states have ultimately de
 Looking at the 2016 election, in particular, there are multiple things that stand out from the graphs above. Four of the swing states that Trump won were states where he had less than 1.5 percent of the vote share. These four states include Florida (1.23 win margin), Michigan (0.23 win margin), Pennsylvania (0.75 win margin), and Wisconsin (0.8 win margin). Furthermore, of these 8 states, only one state was won by Hilary Clinton. Does Biden have the potential to turn things around? Maybe. These are questions that will be explored later, but needless to say, these battleground states are extremely competitive. 
 
 
-**Map of 2016 election**
+**<font size="3"> Map of 2016 Election </font>**
+
 
 As we continue to investigate the 2016 election, we can see that besides some states on the coast or states in middle America, the majority of the states were not as partisan. 
 
