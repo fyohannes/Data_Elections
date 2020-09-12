@@ -1,5 +1,7 @@
 Introduction 
 
+September 12th 2020
+
 **Historical Popular Vote Share**
 
 
