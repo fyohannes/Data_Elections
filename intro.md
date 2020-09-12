@@ -1,6 +1,8 @@
-**<font size="5"> Introduction: Investigting Past Presidential Elections  </font>c**
+**<font size="5"> </font> Introduction: Investigting Past Presidential Elections**
 
 September 12th 2020
+
+
 
 **Historical Popular Vote Share**
 
