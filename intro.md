@@ -24,7 +24,7 @@ Similar to the election of 2000, 2016 was another example in which a candidate w
 
 
 
-**<font size="3"> Swing States in 2016 </font>**
+**<font size="3"> Swing States </font>**
 
 Given that elections are incredibly competitive, swing states have ultimately decided the outcome of elections, thus highlighting the importance of swing states, especially in the 2020 election. [Politco](https://www.politico.com/news/2020/09/08/swing-states-2020-presidential-election-409000) reports that there are 8 states in particular that are very important to this upcoming election. These states include Arizona, Georgia, Florida, Wisconsin, Minnesota, Michigan, Pennsylvania, and North Carolina. The article reports that these states represent 123 out of the 270 electoral college votes needed to win the election. Most importantly these states shed light on some important factors in this election including race and college attainment (especially for white voters). These are all very important factors that will be explored later in this blog. While these factors aren’t shown in the graphics below, the graphics below continue to represent the competitiveness of presidential elections. In particular, the graphics reflect popular vote shares for these eight states from the 1980s to 2016, thus providing more background on past elections and possible recent shifts.
 
