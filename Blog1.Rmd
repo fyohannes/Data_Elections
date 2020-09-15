@@ -114,6 +114,7 @@ Texas <- popvote_bystander %>%
 
 
  # Arizona 
+ # Filter for the state and year that I want
 
 Arizona <- popvote_bystander %>%
   filter(state=="Arizona") %>%
@@ -358,6 +359,8 @@ Wisconsin <- popvote_bystander %>%
   axis.title.y = element_text(size = 28))+
   theme(plot.subtitle = element_text(face = "bold",size=21))
 
+# Merging graphs together
+
 
 plot_grid(Arizona,Florida,Georgia)
 
@@ -377,8 +380,10 @@ ggsave("PV_coast_states_historical.png", height = 12, width = 18)
   
 ```
 
-```{r}
-## shapefile of states from `maps` library
+```{r, Graph 3}
+
+#shapefile of states from `maps` library
+
 states_map <- map_data("state")
 unique(states_map$region)
 
@@ -393,10 +398,13 @@ pv_map <- popvote_bystander %>%
 
 
 ## map: win-margins
+
 pv_margins_map <- popvote_bystander %>%
     filter(year == 2016) %>%
     left_join(states_map, by = "region") %>%
     mutate(win_margin = (R_pv2p-D_pv2p))
+
+# Making my plot
 
 map <- ggplot(pv_margins_map, aes(long, lat, group = group)) +
     geom_polygon(aes(fill = win_margin), color = "black") +
@@ -415,12 +423,15 @@ map <- ggplot(pv_margins_map, aes(long, lat, group = group)) +
 centroids <- data.frame(region=tolower(state.name), long=state.center$x, lat=state.center$y)
 centroids$abb<-state.abb[match(centroids$region,tolower(state.name))]
 
+# Putting boundaries, but I no longer use them
+
 
 x_boundary = -77
 x_limits <- c(-50, NA)
 
 map2 <- map  +
-  # if need to repel labels... could further finetune
+  
+  # Labeling the states so they fit the map and don't overlap
   
   geom_label(data = centroids,
                    aes(x = long,y = lat, label = abb),
@@ -429,7 +440,7 @@ map2 <- map  +
   ) +
 
   
-  # add titles
+  # Add titles and different additions
   
   labs(fill ="Win Margin") +
   labs(title ="2016 Popular Vote Win Margins by State",caption = "Source:Popular Vote Share by State 1948-2016 Dataset")+
