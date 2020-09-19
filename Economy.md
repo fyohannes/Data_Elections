@@ -1,4 +1,4 @@
-**<font size="5"> Economy: How does the economy affect presidential elections? </font>**
+**<font size="5"> Economy: How does the Economy Affect Presidential Elections? </font>**
 
 _**<font size="2"> September 18th 2020 </font>**_
 
