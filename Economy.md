@@ -1,3 +1,3 @@
 **Economy**
 
-![Incumbant Party Economy](PV_historical.png)
+![Incumbant Party Economy](incumbant_economy.png)
