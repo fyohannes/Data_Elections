@@ -19,6 +19,9 @@ _**<font size="2"> September 18th 2020 </font>**_
 ![Economy Table 2](economy_table2.png)
 
 
+![Real Disposable Income](rdi_growth.png)
+
+
 
 
 
