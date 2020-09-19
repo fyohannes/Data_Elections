@@ -1,4 +1,20 @@
 
+# Packages
+
+library(readr)
+library(tidyr)
+library(ggplot2)
+library(dplyr)
+library(maps)
+library(cowplot)
+library(ggrepel)
+
+# For the labeling of my map graph
+
+library(tidyverse)
+
+
+
 # Reading in the local economy
 
 economy_local <- read_csv("local.csv",col_types = cols(
