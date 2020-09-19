@@ -14,9 +14,9 @@ _**<font size="2"> September 18th 2020 </font>**_
 ![Non-Incumbant Party Economy](nonincumbant_economy.png)
 
 
-![Incumbant Party Economy](economy_table1.png)
+![Economy Table 1](economy_table1.png)
 
-![Incumbant Party Economy](economy_table2.png)
+![Economy Table 2](economy_table2.png)
 
 
 
