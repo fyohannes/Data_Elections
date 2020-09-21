@@ -46,12 +46,12 @@ Another interesting economic variable to consider is unemployment rates. This va
 
 
 
-When conducting a regression on unemployment rates and the incumbent popular vote, one finds that the intercept of this line is __**54.23**__ and the unemployment coefficient is _**-0.36**_. It shows that an incumbent will receive around 54 percent of the vote share when there's no unemployment, and will lose **_0.36_** percentage points for each percentage increase in unemployment. Thus, it seems like unemployment rates have a relatively small effect on vote shares. This is also highlighted in the R squared value, which is around _**-.06**_, thus showing relatively little correlation as the R squared is quite far from -1 and 1. 
+When conducting a regression on unemployment rates and the incumbent popular vote, one finds that the intercept of this line is _**54.23**_ and the unemployment coefficient is _**-0.36**_. It shows that an incumbent will receive around 54 percent of the vote share when there's no unemployment, and will lose **_0.36_** percentage points for each percentage increase in unemployment. Thus, it seems like unemployment rates have a relatively small effect on vote shares. This is also highlighted in the R squared value, which is around _**-.06**_, thus showing relatively little correlation as the R squared is quite far from -1 and 1. 
 
 
 **<font size="2"> Predictions for Trump with Q2 GDP Unemployment Rates </font>**
 
-Thus, when imputing our quarterly data into the model, the model predicts that with an unemployment rate of _**13.3 percent**_, Trump would win _**49.49**_ percent of the popular vote. When using 2019 Q1 data of an unemployment rate of _**3.888**_ percent, the model predicts that Trump would win _**52**_ percent of the vote share. Even with a change in unemployment of almost 10 percent, Trump's vote share margins only change by 3 percent, thus emphasizing that unemployment rates on their own might not be the best predictor for this election.
+Thus, when imputing our quarterly data into the model, the model predicts that with an unemployment rate of _**13.3**_ percent, Trump would win _**49.49**_ percent of the popular vote. When using 2019 Q1 data of an unemployment rate of _**3.88**_ percent, the model predicts that Trump would win _**52**_ percent of the vote share. Even with a change in unemployment of almost 10 percent, Trump's vote share margins only change by 3 percent, thus emphasizing that unemployment rates on their own might not be the best predictor for this election.
 
 
 **<font size="3"> Conclusion </font>**
