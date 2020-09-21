@@ -31,31 +31,32 @@ To investigate this further, one can compare the regression summaries of these t
 
 **<font size="2"> Predictions for Trump with Q2 GDP Growth Rates </font>**
 
-Using the information from the regression above, one can predict the outcome of popular vote shares for Trump. If we input the 2020 Q2 GDP growth rate of _**-9.49**_ percent, our model tells us that Trump is expected to win __**21.26**__ percent of the popular vote share. This number is quite low and reflects the economic downturn caused by the pandemic, thus, we can expect that this value actually understates what the real vote shares will turn out to be. Part of this is because some voters may percieve the handling of the pandemic as independent of Trump's performance. Voters may think that the economic decline was invetiable because of the current crisis, thus it is by chance that the ression is occurring during a Trump presidency. If that is the case, it would also be helpful to compare the GDP growth rate of 2019 Q4 (the quarter right before the pandemic began). If we input this growth rate of _**0.58**_ percent, our model predicts that Trump will win the popular vote share with **__51.2**_ percent of the votes. This goes to show that modeling with just this one variable contains a lot of uncertainity due to the unprecdented economic and health conditions.
+
+Using the information from the regression above, one can predict the outcome of the popular vote for Trump. If we input the 2020 Q2 GDP growth rate of _**-9.49**_ percent, our model predicts that Trump will win __**21.26**__ percent of the vote share. This number is quite low and reflects the economic downturn caused by the pandemic. Thus, we can expect that this value understates what the real vote shares will turn out to be. Part of this is because some voters may perceive the handling of the pandemic as independent of Trump's performance. Voters may think that the economic decline was inevitable because of the current crisis and may believe that it is by chance that the recession occurred during a Trump presidency. If that is the case, it would also be helpful to compare the GDP growth rate of 2019 Q4 (the quarter right before the pandemic began). If we input this growth rate of _**0.58**_ percent, our model predicts that Trump will win the popular vote with __**51.2**__ percent of the votes. This goes to show that modeling with just this one variable contains a lot of uncertainty due to the unprecedented economic and health conditions.
 
 
 
 **<font size="3"> Unemployment and Incumbent Elections </font>**
 
 
-Another interesting economic variable to consider is unemployment rates. This variable, at times, can give us insight on the well being of the economy. But can it help us predict the outcome of the election?
+Another interesting economic variable to consider is unemployment rates. This variable, at times, can give us insight into the well being of the economy. But can it help us predict the outcome of the election?
 
 
 ![Real Disposable Income](rdi_growth.png)
 
 
 
-When conducting a regression on unemployment rates and incumbent popualar vote shares, one finds that the intercept of this line is **__54.23_** and the unemployment coefficient is **_-0.36_**. This shows us that an incumbent will recieve around 54 percent of the vote share when there's no unemployment, and will lose **_0.36_** percentage points for each percentage increase in unemployment. Thus, it seems like unemployment rates have a relatively small effect on vote shares. This is also highlighted in the R squared value, which is around _**-.06**_, thus showing relatively little correlation as the value is quite far from -1 and 1. 
+When conducting a regression on unemployment rates and the incumbent popular vote, one finds that the intercept of this line is __**54.23**__ and the unemployment coefficient is _**-0.36**_. It shows that an incumbent will receive around 54 percent of the vote share when there's no unemployment, and will lose **_0.36_** percentage points for each percentage increase in unemployment. Thus, it seems like unemployment rates have a relatively small effect on vote shares. This is also highlighted in the R squared value, which is around _**-.06**_, thus showing relatively little correlation as the R squared is quite far from -1 and 1. 
 
 
 **<font size="2"> Predictions for Trump with Q2 GDP Unemployment Rates </font>**
 
-Thus, when inmputing our quarterly data into the model, the model predicts that with an unemployment rate of 13.3 percent, Trump would win 49.49 percent of the popular vote. When using 2019 Q1 data of an unemployment rate of 3.8 percent the model predicts that Trump would win 52 percent of the vote share. Even with a change in unemployment of almost 10 percent, Trump's vote share margins only change by 3 percent, thus emphasizing that unemployment rates on their own might not be the best predictor for this election.
+Thus, when imputing our quarterly data into the model, the model predicts that with an unemployment rate of _**13.3 percent**_, Trump would win _**49.49**_ percent of the popular vote. When using 2019 Q1 data of an unemployment rate of _**3.888**_ percent, the model predicts that Trump would win _**52**_ percent of the vote share. Even with a change in unemployment of almost 10 percent, Trump's vote share margins only change by 3 percent, thus emphasizing that unemployment rates on their own might not be the best predictor for this election.
 
 
 **<font size="3"> Conclusion </font>**
 
-Both GDP growth rates and unemployment rates reflect valuable aspects of the economy; however, they may not be the best predictor variables on thir own. GDP growth rates have declined immensely and unemployment has shot up due to the pandemic. In our models both of these variables predict a Trump loss in the popular vote, with our first model understating Trump's true vote share and the second model providing us with a much closer election outcome. In conlcusion, while both of these variables are helpful in out analysis, given the pandemic and the uncertainity that it has caused, I also recognize that one must include other varaibles in our prediciton model to give us a better picture. 
+Both GDP growth rates and unemployment rates reflect valuable aspects of the economy; however, they may not be the best predictor variables on their own. In Q2, GDP growth rates have declined immensely and unemployment has rapidly increased due to the pandemic. In our models, both of these variables predict a Trump loss in the popular vote, with our first model understating Trump's vote share and the second model providing us with a much closer election outcome. In conclusion, while both of these variables are helpful in out analysis, given the pandemic and the uncertainty that it has caused, I also recognize that one must include other variables in our prediction model to give us a better picture. 
 
 
 
