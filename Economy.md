@@ -23,7 +23,7 @@ The graphs above show that historically there has been a positive correlation wi
 
 ![Economy Table 1](Economy_table1.png)
 
-![Economy Table 2](Economy table 2.png)
+![Economy Table 2](Economy Table 2.png)
 
 
 To investigate this further, one can compare the regression summaries of these two graphs. The first table shows us that if GDP in Q2 were to remain the same, then the candidate from the incumbent party would receive around _49.5_ percent of the votes. The GDP_growth_qt coefficient reflects that with each percentage of GDP growth, the candidate would expect an increase in vote shares by almost _3_ percent. Similarly, the second table shows us that with no change in GDP in Quarter 2, then the candidate from the new party would receive around _50.5_ percent of the vote share. The GDP_growth_qt coefficient demonstrates that with each percentage decline in GDP growth, the candidate would expect a decrease of almost _3_ percent for vote shares.
