@@ -6,7 +6,7 @@ _**<font size="2"> September 18th 2020 </font>**_
 
 **<font size="3"> Presidential Elections and the Economy </font>**
 
-Every presidential election covers one aspect, in particular, the economy. But what does the economy entail? Is it the stock market? Inflation rates? GDP growth? Many scholars have investigated this topic, specifically exploring the effect that quarter 2 GDP growth can have on presidential elections. Scholars have generally found that this variable can be a significant predictor variable for the outcome for the election because voters generally give more weight to recent experience (Achen and Bartels). Given that there is a strong correlation between quarter 2 GDP growth and election outcome, it would be interesting to compare the difference in effect that this has on the incumbent party versus a non-incumbent party.
+Every presidential election covers one aspect, in particular, the economy. But what does the economy entail? Is it the stock market? Inflation rates? GDP growth? Many scholars have investigated this topic, specifically exploring the effect that Quarter 2 GDP growth can have on presidential elections. Scholars have generally found that this variable can be a significant predictor variable for the outcome for the election because voters generally give more weight to recent experience (Achen and Bartels). Given that scholars have found a strong correlation between Quarter 2 GDP growth and election outcome, it would be interesting to compare the difference in effect that this has on the incumbent party versus a non-incumbent party.
 
 
 
@@ -20,7 +20,8 @@ Every presidential election covers one aspect, in particular, the economy. But w
 ![Non-Incumbant Party Economy](nonincumbant_economy.png)
 
 
-The graphs above show that historically there has been a positive correlation with Q2 GDP growth and re-election for the incumbent party and a negative correlation for the non-incumbent party. Thus, for incumbent parties, it seems like candidates tend to win larger popular vote share margins when there’s increased GDP growth in Q2. On the other hand, for non-incumbent parties, the opposite occurs, there’s a negative correlation, and thus, declines in GDP growth rate seem to correlate with larger popular vote shares. The reason for the difference between the two graphs is rooted in how voters perceive blame and success for the state of the economy. If the economy is doing well while an incumbent party is running for president, voters may credit this to the incumbent party and reward them by re-electing the party. However, if the economy isn’t doing as well (Q2 GDP growth decreases), voters may blame the incumbent party and punish them by electing the other party. 
+
+The graphs above show that historically there has been a positive correlation with Q2 GDP growth and re-election for the incumbent party and a negative correlation for the non-incumbent party. Thus, for incumbent parties, it seems like candidates tend to win larger vote shares when there’s increased GDP growth in Q2. On the other hand, for non-incumbent parties, the opposite occurs, there’s a negative correlation, and thus, declines in GDP growth rate seem to correlate with larger popular vote shares. The reason for the difference between the two graphs is rooted in how voters perceive blame and success for the state of the economy. If the economy is doing well while an incumbent party is running for president, voters may credit this to the incumbent party and reward them by re-electing the party. However, if the economy isn’t doing as well (Q2 GDP growth decreases), voters may blame the incumbent party and punish them by electing the other party. 
 
 
 
@@ -54,7 +55,7 @@ Another interesting economic variable to consider is unemployment rates. This va
 
 
 
-When conducting a regression on unemployment rates and the incumbent popular vote, one finds that the intercept of this line is _**54.23**_ and the unemployment coefficient is _**-0.36**_. It shows that an incumbent will receive around 54 percent of the vote share when there's no unemployment, and will lose **_0.36_** percentage points for each percentage increase in unemployment. Thus, it seems like unemployment rates have a relatively small effect on vote shares. This is also highlighted in the R squared value, which is around _**-.06**_, thus showing relatively little correlation as the R squared is quite far from -1 and 1. 
+When conducting a regression on unemployment rates and the incumbent popular vote, one finds that the intercept of this line is _**54.23**_ and the unemployment coefficient is _**-0.36**_. It shows that an incumbent will receive around 54 percent of the vote share when there's no unemployment, and will lose **_0.36_** percentage points for each percentage increase in unemployment. Thus, it seems like unemployment rates have a relatively small effect on vote shares. This is also highlighted in the R squared value, which is around _**-.06**_, thus showing relatively little correlation as the R squared is quite far from -1 and 1 (values that show perfect correlation). 
 
 
 **<font size="2"> Predictions for Trump with Q2 GDP Unemployment Rates </font>**
@@ -66,7 +67,7 @@ Thus, when imputing our quarterly data into the model, the model predicts that w
 
 **<font size="3"> Conclusion </font>**
 
-Both GDP growth rates and unemployment rates reflect valuable aspects of the economy; however, they may not be the best predictor variables on their own. In Q2, GDP growth rates have declined immensely and unemployment has rapidly increased due to the pandemic. In our models, both of these variables predict a Trump loss in the popular vote, with our first model understating Trump's vote share and the second model providing us with a much closer election outcome. In conclusion, while both of these variables are helpful in out analysis, given the pandemic and the uncertainty that it has caused, I also recognize that one must include other variables in our prediction model to give us a better picture. 
+Both GDP growth rates and unemployment rates reflect valuable aspects of the economy; however, they may not be the best predictor variables on their own. In Q2, GDP growth rates declined immensely and unemployment rapidly increased due to the pandemic. In our models, both of these variables predict a Trump loss in the popular vote, with our first model understating Trump's vote share and the second model providing us with a much closer election outcome. In conclusion, while both of these variables are helpful in out analysis, given the pandemic and the uncertainty that it has caused, I also recognize that one must include other variables in our prediction model to give us a better picture. 
 
 
 
