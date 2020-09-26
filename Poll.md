@@ -17,10 +17,10 @@ _**<font size="2"> September 25th 2020 </font>**_
 ![Poll Grade B](poll_gradeB.png)
 
 
-![Clinton Months]("clinton_months_poll.png")
+![Clinton Months](clinton_months_poll.png)
 
 
-![Trump Months]("trump_months_poll.png")
+![Trump Months](trump_months_poll.png)
 
 
 
