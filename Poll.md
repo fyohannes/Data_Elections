@@ -10,6 +10,8 @@ _**<font size="2"> September 25th 2020 </font>**_
 Historically, polls have given us great insight into the outcome of presidential elections. Polls attempt to measure the public's opinion through different surveys, adjusting for the makeup of the US population. But are polls always accurate? A recent presidential election that highlights some of the faults with elections is the 2016 presidential election. Poll after poll claimed that Hillary would clinch the win, but in fact, she lost the election. Some of the poll mistakes were attributed to the lack of representation of non-educated white Americans in the surveys and the fact that many people concealed their true vote for Donald Trump. Despite this, however, historical data shows a strong positive correlation between polling and vote shares.
 
 
+
+
 ![Historical Polll](historical_poll.png)
 
 
@@ -55,8 +57,7 @@ From the graphs above, it seems like pollsters in November serve as better predi
 **<font size="3"> Presidential Election Model </font>**
 
 
-
-Knowing this information we can include pollster data with previous economic data to create a multi-variable model to predict the 2020 election. Although quality can affect the accuracy of polls, given that time seems to play a larger role, I will use poll data from the 6 weeks leading up to the election in my model. My other dependent variable will be Q2 GDP growth from the election year, something I explored in my last blog post. I will use these two dependent variables, Q2 GDP Growth and average support from polls, to predict vote shares for candidiates from incumbent parties. 
+Knowing this information, one can include pollster data with previous economic data to create a multi-variable model to predict the 2020 election. Although quality can affect the accuracy of polls, given that time seems to play a larger role, I will use poll data from the 6 weeks leading up to the election in my model. My other dependent variable will be Q2 GDP growth from the election year, something I explored in my last blog post. I will use these two dependent variables, Q2 GDP Growth and average support from polls, to predict vote shares for candidates from incumbent parties. 
 
 
 
@@ -64,7 +65,10 @@ Knowing this information we can include pollster data with previous economic dat
 
 
 
-The table above shows the regression table of this model. Our intercept tells us the predicted vote share with no support from polls and no change in Q2 GDP growth. The avg_support coefficent tells us that for every one point increase in support in polls, vote shares will increase by 0.67 percentage points. Likewise, the GDP_growth_qt coefficent tells us that for every increase in Q2 GDP Growth, vote shares will increase by .49 percentage points. If one were to calculate an out of sample prediction for Hillary's vote share in 2016, the outcome would predict that Hillary would win 51.2 percent of the vote. Although this is a bit higher than the 47 percent that she actually did win, part of this can be attributed to the lack of accuracy of 2016 polls in general. 
+The table above shows the regression table of this model. Our intercept tells us the predicted vote share with no support from polls and no change in Q2 GDP growth. The avg_support coefficient tells us that for every one-point increase in support in polls, vote shares will increase by 0.67 percentage points. Likewise, the GDP_growth_qt coefficient tells us that for every one-point increase in Q2 GDP Growth, vote shares will increase by .49 percentage points. If one were to calculate an out of sample prediction for Hillary's vote share in 2016, the outcome would predict that Hillary would win 51.2 percent of the vote. Although this is a bit higher than the 47 percent that she actually did win, part of this can be attributed to the lack of accuracy of 2016 polls in general. 
+
+
+Furthermore, the standard error for the average support variable, the variable the depicts polls, is quite low, and the pvalue is also significant. This shows that this variable seems to be a good predictor in this model. While the standard error for the Q2 GDP growth variable, is a bit higher, this doesn't completely disregard the importance of this variable; however, in this particular model, it may not be as significant as poll ratings.
 
 
 
@@ -72,8 +76,11 @@ The table above shows the regression table of this model. Our intercept tells us
 
 
 
-We can also use this model to calcualte Trump's 2020 vote share. When inputing Q2 decline in GDP growth by 9.49 percent and Trump's average poll ratings of 41 percent, the model predicts a vote share of 40.19. I calculated the dependent variable of average poll ratings by subsetting for only the most recent poll surveys, which was in September, and then calculatting the average amount of voters that said that they would vote for Trump in comparison to Biden or any other 3rd party candidate. I used Q2 GDP growth in this model as well because I wanted a model that included other predictor variables. 
-As I mentioned in the previous blog, the most recent GDP growth rate can provide insight into the outcome of the election. Although, we are unsure of how voters interpert GDP growth/decline in respect to attributing blame/success, I still think this is an important variable to consider, given the past historical trends.
+We can also use this model to calculate Trump's 2020 vote share. When inputting the Q2 decline in GDP growth by 9.49 percent and Trump's average poll ratings of 41 percent, the model predicts a vote share of 40.19. I calculated the dependent variable of average poll ratings by subsetting for only the most recent poll surveys, which was in September. Then, I calculated the average amount of voters that said that they would vote for Trump in comparison to Biden or any other 3rd party candidate. I used Q2 GDP growth in this model as well because I wanted a model that included other predictor variables. 
+
+
+
+As I mentioned in the previous blog post, the most recent GDP growth rate can provide insight into the outcome of the election. Although we are unsure of how voters interpret GDP growth/decline for attributing blame/success, I still think this is an important variable to consider, given the past historical trends.
 
 
 **<font size="3"> Conclusion </font>**
