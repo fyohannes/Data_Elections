@@ -7,6 +7,7 @@ _**<font size="2"> September 25th 2020 </font>**_
 **<font size="3"> Presidential Elections Polls Historically </font>**
 
 
+
 Historically, polls have given us great insight into the outcome of presidential elections. Polls attempt to measure the public's opinion through different surveys, adjusting for the makeup of the US population. But are polls always accurate? A recent presidential election that highlights some of the faults with elections is the 2016 presidential election. Poll after poll claimed that Hillary would clinch the win, but in fact, she lost the election. Some of the poll mistakes were attributed to the lack of representation of non-educated white Americans in the surveys and the fact that many people concealed their true vote for Donald Trump. Despite this, however, historical data shows a strong positive correlation between polling and vote shares.
 
 
@@ -30,6 +31,8 @@ As we've seen from the 2016 presidential election, adjusted poll weights can gre
 ![Poll Grade B](poll_gradeB.png)
 
 
+
+
 The graphs above depict surveyed poll shares from grade A and grade B for both Donald Trump and Hillary Clinton. The histograms represent how many pollsters surveyed a range of vote share percentages, with the black vertical line representing the true vote share for both candidates. 
 The popular vote share for the 2016 election for Hillary Clinton was 47.05 percent, while Donald Trump won 44.91 percent of the votes. The average vote share from grade A polls for Hillary Clinton was 43.7 percent and 37.35 percent for Trump. If we look at the normal distribution of these graphs, it is clear that both grade A and grade B were a bit off, but grade A seems to be a bitter predictor of the election outcome. The difference in poll outcome and election outcome for Clinton for grade A polls was 3.35, while for Trump it was 7.56 percent. For the grade B poll, the vote shares for Clinton was 43.6 and 39.16 percent for Trump. Thus, grade A pollsters were a slightly better pick for Hillary Clinton, and grade B vote shares for Trump were almost two points closer to the true outcome. 
 
@@ -46,6 +49,7 @@ We know there are some differences in poll vote shares depending on quality, but
 
 
 ![Trump Months](trump_months_poll.png)
+
 
 
 
@@ -72,19 +76,22 @@ Furthermore, the standard error for the average support variable, the variable t
 
 
 
-**<font size="2"> 2020 Presidential Election Model </font>**
+**<font size="3"> 2020 Presidential Election Model </font>**
 
 
 
-We can also use this model to calculate Trump's 2020 vote share. When inputting the Q2 decline in GDP growth by 9.49 percent and Trump's average poll ratings of 41 percent, the model predicts a vote share of 40.19. I calculated the dependent variable of average poll ratings by subsetting for only the most recent poll surveys, which was in September. Then, I calculated the average amount of voters that said that they would vote for Trump in comparison to Biden or any other 3rd party candidate. I used Q2 GDP growth in this model as well because I wanted a model that included other predictor variables. 
-
-
-
+We can also use this model to calculate Trump's 2020 vote share. When inputting the Q2 GDP growth decline of 9.49 percent and Trump's average poll ratings of 41 percent, the model predicts a vote share of 40.19. I calculated the independent variable of average poll ratings by subsetting for the most recent poll surveys, which was in September. Then, I found the average amount of voters that said that they would vote for Trump in comparison to Biden or any other 3rd party candidate. I used Q2 GDP growth in this model as well because I wanted a model that included other predictor variables. 
 As I mentioned in the previous blog post, the most recent GDP growth rate can provide insight into the outcome of the election. Although we are unsure of how voters interpret GDP growth/decline for attributing blame/success, I still think this is an important variable to consider, given the past historical trends.
+
+In my model, I predicted a vote share of 40.19, which is around 4.3 percentage points lower than the prediction of Trump's vote share from the first historical model. The historical model used polling as the only predictor of vote shares and predicted that Trump would win around 44.5 percent of the popular vote. Similar to my own model, I only included the most recent polls to calculate Trump's average support. The differences between these two models show the impact that GDP growth could have in the election, but also highlight the overwhelming predictive power that average support from polls has.
+
+When comparing the first historical model with this model, it seems like the historical model is a better fit for the data, as it's R squared value is 0.88, and this model's R squared is 0.63. However, it is important to note that the original model includes all presidential elections, not just incumbent parties. While that might not be the root cause of the R squared discrepancies, it may have impacted it. Thus, overall, the lower R squared in this model (the model that includes an economic variable) shows that the model may need to incorporate other variables or re-evaluate if there is any interaction between Q2 GDP growth and average support from polls.
 
 
 **<font size="3"> Conclusion </font>**
 
+
+To include, average support for a candidate, when weighted accurately, can serve to be a significant predictor for the outcome of the 2020 election. While economic variables may not be a great predictor independently for this election, a model that includes both variables that represent polling and the economy, as well as other variables, may serve to be a great model.
 
 
 
