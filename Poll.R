@@ -18,7 +18,7 @@ library(gt)
 
 library(tidyverse)
 
-library(lubridate))
+library(lubridate)
 
 # Need this for my mutate with the date
 
@@ -122,18 +122,17 @@ data_incumbent <- data_ %>%
 # Create Historical Popvote and Poll Graph
 
 data_ %>%
-  ggplot(aes(x=avg_support,y=pv2p,label=year))  +geom_text()
+  ggplot(aes(x=avg_support,y=pv2p,label=year,color=party))+
   labs(title ="Historical Poll Data and Presidential Vote Shares",
        subtitle="Presidential Elections 1968-2016",
-       x=" Average Support from Polls (%)",y= "Popular Vote Share(%)",
-       caption= "Source:Economic Analysis, US Bureau of Department of Commerce \n Caption: Democrats noted by blue, Republicans by red") +
+       x=" Average Support from Polls (%)",y= "Popular Vote Share(%)") +
   scale_fill_manual(labels=c("Democrat", "Republican"),values = c("democrat", "republican")) +
   labs(color="Party")+
-  geom_text(size=14,show.legend = FALSE) +
+  geom_point(size=12) +
   geom_smooth(method = "lm", se = FALSE,formula=y~x,aes(group=1),colour="black") +
   scale_color_manual(values = c("democrat" = "blue", "republican" = "red")) + 
-  theme(plot.title = element_text(face = "bold",size=30))+
-  theme(plot.subtitle = element_text(face = "bold",size=29)) +
+  theme(plot.title = element_text(face = "bold",size=35))+
+  theme(plot.subtitle = element_text(face = "bold",size=32)) +
   theme(plot.caption =element_text(face = "bold",size=27))+
   theme(axis.title.x = element_text(size = 30),
         axis.title.y = element_text(size = 30)) +
@@ -144,6 +143,7 @@ data_ %>%
   theme(axis.text.x = element_text(color = "black", size = 26, hjust = .5, vjust = .5, face = "plain"),
         axis.text.y = element_text(color = "black", size = 26, angle = 0, hjust = 1, vjust = 0, face = "plain"))
 
+ggsave("historical_poll.png", height = 13, width = 21)
 
   
 # Creating Regression for Historical Poll and Pop Vote Share data, Incumbent party
@@ -167,13 +167,12 @@ poll1 <- poll_2016 %>%
   select("pollster","poll_wt","rawpoll_clinton","rawpoll_trump","startdate","grade","year") %>%
   
   # Mutating the months 
-  
-  mutate(Months= ifelse(grepl(startdate,"11")), "November"
-         ifelse(startsWith(startdate,"10")), "October"
-         ifelse(startsWith(startdate,"9")), September, NA) 
-                                  
-                                  
-    
+
+mutate(date= ifelse(startsWith(startdate,"11"), "November", 
+            ifelse(startsWith(startdate,"10"), "October",
+            ifelse(startsWith(startdate,"9"), "September", NA))))
+         
+         
   # Full joining two datasets
   
   popvote <- popvote %>% 
@@ -211,16 +210,11 @@ poll1 <- poll_2016 %>%
 
     # Making Graphs, Clinton 2016
     
-    a <- data1 %>%
+   a <- data1 %>%
       ggplot(aes(x=rawpoll_clinton)) + geom_histogram(fill="blue") + geom_vline(xintercept=47.05,col="black") +
-      labs(title =" Clinton's Poll Vote Outcome in the 2016 Presidential Election",
+      labs(title =" Clinton's Poll Vote Outcome in 2016",
            subtitle="Includes only Grade A Pollsters",
-           x="Poll Votes (%)",y= "Count",
-           caption= "Source: Economic Analysis, US Bureau of Department of Commerce \n Caption: Democrats noted by blue, Republicans by red")+
-      geom_text(size=14,show.legend = FALSE) +
-      geom_smooth(method = "lm", se = FALSE,formula = y ~ x,aes(group=1),colour="black") +
-      scale_color_manual(values = c("democrat" = "blue", "republican" = "red")) + 
-      labs(color = "Party") +
+           x="Poll Votes (%)",y= "Count")+
       theme(plot.title = element_text(face = "bold",size=30))+
       theme(plot.subtitle = element_text(face = "bold",size=29)) +
       theme(plot.caption =element_text(face = "bold",size=27))+
@@ -232,33 +226,52 @@ poll1 <- poll_2016 %>%
       ) +
       theme(axis.text.x = element_text(color = "black", size = 26, hjust = .5, vjust = .5, face = "plain"),
             axis.text.y = element_text(color = "black", size = 26, angle = 0, hjust = 1, vjust = 0, face = "plain"))
+     
+     ggsave("clinton_A_poll.png", height = 13, width = 21)
     
   
-     # Creating Clinton 2016 Regression Model
+     # Finding Poll Average Vote Share for Clinton 2016, 43.689
   
     
-lm_poll1 <- lm(pv~ avg_support_clinton , data = data1)
+data1$avg_poll_clinton
 
-    # Summary poll 1
+sd(data1$rawpoll_clinton)
 
-summary(lm_poll1)
-    
-    
+data1%>%
+  filter(rawpoll_clinton > 46 | rawpoll_clinton < 48) %>%
+  count()
+
+
+
+
+data1 %>%
+
     
 # Donald Trump 2016
     
-  b <- data1 %>%
+b  <- data1 %>%
 ggplot(aes(x=rawpoll_trump)) + geom_histogram(fill="red") + geom_vline(xintercept=44.91,col="black") +
-    labs(title =" Trump's Poll Vote Outcome in the 2016 Presidential Election",
+    labs(title =" Trump's Poll Vote Outcome in 2016",
          subtitle="Includes only Grade A Pollsters",
-         x="Poll Votes (%)",y= "Count",
-         caption= "Source: Economic Analysis, US Bureau of Department of Commerce \n Caption: Democrats noted by blue, Republicans by red")
+         x="Poll Votes (%)",y= "Count") +
+    theme(plot.title = element_text(face = "bold",size=30))+
+    theme(plot.subtitle = element_text(face = "bold",size=29)) +
+    theme(plot.caption =element_text(face = "bold",size=27))+
+    theme(axis.title.x = element_text(size = 30),
+          axis.title.y = element_text(size = 30)) +
+    theme(
+      legend.title = element_text(color = "black", size = 29),
+      legend.text = element_text(color = "black", size = 29)
+    ) +
+    theme(axis.text.x = element_text(color = "black", size = 26, hjust = .5, vjust = .5, face = "plain"),
+          axis.text.y = element_text(color = "black", size = 26, angle = 0, hjust = 1, vjust = 0))
   
-  # Trump Regression for 2016
   
-  lm_poll2 <- lm(avg_poll_trump ~ pv , data = data1)
-  summary(lm_poll2)
+  ggsave("trump_A_poll.png", height = 13, width = 21)
   
+  # Finding Vote Average Vote Share for Donald Trump, 37.35
+  
+  data1$avg_poll_trump
   
   
   # Grade B Pollster 
@@ -267,29 +280,294 @@ ggplot(aes(x=rawpoll_trump)) + geom_histogram(fill="red") + geom_vline(xintercep
   
   
   c <- data2 %>%
-    ggplot(aes(x=rawpoll_clinton)) + geom_histogram(fill="blue") + geom_vline(xintercept=47.05,col="black")
+    ggplot(aes(x=rawpoll_clinton)) + geom_histogram(fill="blue") + geom_vline(xintercept=47.05,col="black")+
+    labs(title =" Clinton's Poll Vote Outcome in 2016",
+         subtitle="Includes only Grade B Pollsters",
+         x="Poll Votes (%)",y= "Count")+
+    theme(plot.title = element_text(face = "bold",size=30))+
+    theme(plot.subtitle = element_text(face = "bold",size=29)) +
+    theme(plot.caption =element_text(face = "bold",size=27))+
+    theme(axis.title.x = element_text(size = 30),
+          axis.title.y = element_text(size = 30)) +
+    theme(
+      legend.title = element_text(color = "black", size = 29),
+      legend.text = element_text(color = "black", size = 29)
+    ) +
+    theme(axis.text.x = element_text(color = "black", size = 26, hjust = .5, vjust = .5, face = "plain"),
+          axis.text.y = element_text(color = "black", size = 26, angle = 0, hjust = 1, vjust = 0))
   
   
-  # Clinton Grade B regression 
+  # Clinton Grade B Average Poll Vote Share,43.465
   
-  lm_poll3 <- lm(avg_support_clinton ~ pv , data = data2)
+  data2$avg_poll_clinton
   
-  # Summary poll 3
-  
-  summary(lm_poll3)
-  
+
   
   # Trump 2016
   
   d <- data2 %>%
     ggplot(aes(x=rawpoll_trump)) + geom_histogram(fill="red") + geom_vline(xintercept=44.91,col="black") +
-    labs(title =" Trump's Poll Vote Outcome in the 2016 Presidential Election",
+    labs(title =" Trump's Poll Vote Outcome in 2016",
          subtitle="Includes only Grade B Pollsters",
-         x="Poll Votes (%)",y= "Count",
-         caption= "Source: Economic Analysis, US Bureau of Department of Commerce \n Caption: Democrats noted by blue, Republicans by red")
+         x="Poll Votes (%)",y= "Number of Pollsters") +
+    theme(plot.title = element_text(face = "bold",size=30))+
+    theme(plot.subtitle = element_text(face = "bold",size=29)) +
+    theme(plot.caption =element_text(face = "bold",size=27))+
+    theme(axis.title.x = element_text(size = 30),
+          axis.title.y = element_text(size = 30)) +
+    theme(
+      legend.title = element_text(color = "black", size = 29),
+      legend.text = element_text(color = "black", size = 29)
+    ) +
+    theme(axis.text.x = element_text(color = "black", size = 26, hjust = .5, vjust = .5, face = "plain"),
+          axis.text.y = element_text(color = "black", size = 26, angle = 0, hjust = 1, vjust = 0))
   
   
-  # Poll by Date
+  
+  # Trump Grade B Poll Averages,39.16
+  
+  data2$avg_poll_trump
+  
+  
+  # Poll Grids by Quality for Clinton and Trump
+  
+# Grade A
+  
+  plot_grid(a,b)
+  
+  ggsave("poll_gradeA.png", height = 12, width = 18)
+  
+# Grade B
+  
+  plot_grid(c,d)
+  
+  ggsave("poll_gradeB.png",height=12,width=18)
+  
+  
+  
+  # Muting Poll1
+  
+  poll1 <- poll1 %>%
+    mutate(avg_poll_clinton= mean(rawpoll_clinton)) %>%
+    mutate(avg_poll_trump=mean(rawpoll_trump))
+  
+  # Clinton 2016 Poll by Months
+  
+  poll1 %>%
+    na.omit() %>%
+    ggplot(aes(x=rawpoll_clinton)) + geom_histogram(fill="blue") + geom_vline(xintercept=47.05,col="black") + facet_wrap(~date) +
+    labs(title =" Clinton's  Poll Vote Outcome in the 2016 Presidential Election",
+         subtitle="Separating Pollsters by Month",
+         x="Poll Votes (%)",y= "Number of Pollsters") +
+    theme(plot.title = element_text(face = "bold",size=30))+
+    theme(plot.subtitle = element_text(face = "bold",size=29)) +
+    theme(plot.caption =element_text(face = "bold",size=27))+
+    theme(axis.title.x = element_text(size = 30),
+          axis.title.y = element_text(size = 30)) +
+    theme(
+      legend.title = element_text(color = "black", size = 29),
+      legend.text = element_text(color = "black", size = 29)
+    ) +
+      theme(axis.text.x = element_text(size = 20),
+           axis.text.y = element_text(size = 30))+
+    theme(strip.text.x = element_text(size=34),
+          strip.text.y = element_text(size=30))
+  
+  ggsave("clinton_months_poll.png", height = 13, width = 21)
+  
+  
+  # Finding Poll Date Averages, November=45.4, October=44.7, September = 43
+  
+  poll1%>%
+    filter(date=="November") %>%
+    mutate(avg_November_Clinton =mean(rawpoll_clinton)) %>%
+    select(avg_November_Clinton)
+  
+  poll1%>%
+    filter(date=="October") %>%
+    mutate(avg_october_clinton=mean(rawpoll_clinton)) %>%
+    select(avg_october_clinton)
+  
+  poll1%>%
+    filter(date=="September") %>%
+    mutate(avg_september_clinton=mean(rawpoll_clinton)) %>%
+    select(avg_september_clinton)
+  
+  
+  # Donald Trump Poll Votes 2016
+  
+  # Creating Graph 
+  
+  poll1 %>%
+    na.omit() %>%
+    ggplot(aes(x=rawpoll_trump)) + geom_histogram(fill="red") + geom_vline(xintercept=47.05,col="black") + facet_wrap(~date) +
+    labs(title ="Trump's Poll Vote Outcome in the 2016 Presidential Election",
+         subtitle="Separting Pollsters by Month",
+         x="Poll Votes (%)",y= "Number of Pollsters") +
+    theme(plot.title = element_text(face = "bold",size=30))+
+    theme(plot.subtitle = element_text(face = "bold",size=29)) +
+    theme(plot.caption =element_text(face = "bold",size=27))+
+    theme(axis.title.x = element_text(size = 30),
+          axis.title.y = element_text(size = 30)) +
+    theme(
+      legend.title = element_text(color = "black", size = 29),
+      legend.text = element_text(color = "black", size = 29)
+    ) +
+    theme(axis.text.x = element_text(size = 25),
+          axis.text.y = element_text(size = 30)) + 
+    theme(strip.text.x = element_text(size = 34),
+          strip.text.y = element_text(size = 30))
+  
+  ggsave("trump_months_poll.png", height = 13, width = 21)
+  
+  
+  # Finding Poll Date Averages, November=42.3, October=41.1, September = 41.4
+  
+  poll1%>%
+    filter(date=="November") %>%
+    mutate(avg_November_trump =mean(rawpoll_trump)) %>%
+    select(avg_November_trump)
+  
+  poll1%>%
+    filter(date=="October") %>%
+    mutate(avg_october_trump=mean(rawpoll_trump)) %>%
+    select(avg_october_trump)
+  
+  poll1%>%
+    filter(date=="September") %>%
+    mutate(avg_september_trump=mean(rawpoll_trump)) %>%
+    select(avg_september_trump)
+  
+  
+  
+  
+    
+########### CREATING MODELS ############
+  
+  
+# Data 
+  
+# Filter for November and Grade A and Grade B po
+  
+ 
+
+  poll1 %>%
+    filter(date =="November") %>%
+    filter(grade %in% c("A+","A","A-"))
+  
+
+  
+  # Use this data with economy to create a model for 2016, for both Hiliary and Trump
+  
+  
+    
+    
+  data_model <- popvote %>% 
+    full_join(poll_national %>% 
+                group_by(year,party) %>% 
+                
+    # Filtering for 9 weeks
+      
+                filter(weeks_left==9) %>%
+                summarise(avg_support=mean(avg_support))) %>% 
+    left_join(economy %>% 
+                filter(quarter == 2))
+  
+  
+  # Making the general model 
+  
+  data_model_incumbent<-data_model %>%
+    filter(incumbent_party=="TRUE")
+  
+  model_2016 <- glm(pv~avg_support + GDP_growth_qt,data=data_model_incumbent)
+  
+  
+  # Summary of the model
+  
+  summary(model_2016)
+  
+  
+  # R squared and Standard Error of the model
+  
+  summary(model_2016)$r.squared # 0.64
+  
+  R2 <- rsq(model_2016)
+  
+  std.error
+  
+  
+  # Making a table
+  
+  table_poll<- tidy(model_2016)
+  
+  gt(table_poll) %>%
+    tab_header(
+      title = "Quarter 2 GDP Growth Rate and Polls for Re-Election for Incumbant Parties",
+      subtitle = "1968-2016"
+    ) %>%
+    fmt_number(columns=2:4,decimals = 2) 
+  
+  table_poll
+  
+  
+  
+
+# Testing Hiliary Clinton
+
+  outsamp_mod  <- lm(pv ~ GDP_growth_qt, data_model_incumbent[data_model_incumbent$year != 2016,])
+  outsamp_pred <- predict(outsamp_mod, data_model_incumbent[data_model_incumbent$year == 2016,])
+  outsamp_true <- data_model_incumbent$pv2p[data_model_incumbent$year == 2016] 
+  
+
+  # For Hiliary Clinton should have predicted 51.16 percent
+  
+  
+  # Trump average support 2020
+  
+  poll_2020 %>%
+    filter(startsWith(start_date,"9")) %>%
+    count(answer=="Biden")
+  
+  # 251/(613+251), 0.29
+  
+  poll_2020 %>%
+    filter(startsWith(start_date,"9")) %>%
+    count(answer=="Trump")
+  
+ # 353/(353+511), 0.408
+  
+  
+  
+  # Predicting Trump
+  
+# 41 pollster vote shares
+# -9.49 percent Q2 
+  
+# Trump Predict Numbers
+  
+17.38 + (0.67*41) - (9.49*0.49)
+
+#40.19
+  
+
+# Comparing Trump's Numbers with Historical Model
+
+4.98516 + (0.96362*41)
+
+# Calculating the Difference 
+
+44.49358 - 40.1999
+
+
+
+
+  
+
+  
+  
+  
+  
+  
   
   
   
