@@ -60,6 +60,8 @@ Knowing this information we can include pollster data with previous economic dat
 
 
 
+![Poll Table](Poll_Table1.png)
+
 
 
 The table above shows the regression table of this model. Our intercept tells us the predicted vote share with no support from polls and no change in Q2 GDP growth. The avg_support coefficent tells us that for every one point increase in support in polls, vote shares will increase by 0.67 percentage points. Likewise, the GDP_growth_qt coefficent tells us that for every increase in Q2 GDP Growth, vote shares will increase by .49 percentage points. If one were to calculate an out of sample prediction for Hillary's vote share in 2016, the outcome would predict that Hillary would win 51.2 percent of the vote. Although this is a bit higher than the 47 percent that she actually did win, part of this can be attributed to the lack of accuracy of 2016 polls in general. 
