@@ -94,7 +94,7 @@ When comparing the first historical model with this model, it seems like the his
 **<font size="3"> Conclusion </font>**
 
 
-To include, average support for a candidate, when weighted accurately, can serve to be a significant predictor for the outcome of the 2020 election. 
+To conclude, average support for a candidate, when weighted accurately, can serve to be a significant predictor for the outcome of the 2020 election. 
 While the original historical model seems to be better, I think there still is value in incorporating GDP growth or other economic variables. As I continue through this blog, I will continue to create better models with variables representing different factors.
 
 
