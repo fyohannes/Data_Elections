@@ -74,7 +74,7 @@ Our intercept tells us the predicted vote share with no support from polls and n
 
 Furthermore, the standard error for the average support variable, the variable the depicts polls, is quite low, and the P-value is also significant. This shows that this variable seems to be a good predictor in this model. While the standard error for the Q2 GDP growth variable, is a bit higher, this doesn't completely disregard the importance of this variable; however, in this particular model, it may not be as significant as poll ratings.
 
-Additionally, we can compare this model to a model without GDP growth. If we only look at poll averages from the 9 weeks leading to the election, one would get a model with an R-squared of __*0.596*__, which is lower than our current model's R-squared of __*0.63*__. Given that, our model with GDP growth seems to be better than our model with just poll averages. 
+Additionally, we can compare this model to a model without GDP growth. If we only look at poll averages from the 9 weeks leading to the election, one would get a model with an R-squared value of __*0.596*__, which is lower than our current model's R-squared value of __*0.63*__. Given that, our model with GDP growth seems to be better than our model with just poll averages. 
 
 
 
