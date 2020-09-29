@@ -13,6 +13,7 @@ Historically, polls have given us great insight into the outcome of presidential
 
 
 
+
 ![Historical Polll](historical_poll.png)
 
 
