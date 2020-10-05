@@ -1,4 +1,4 @@
-Incumbency and Federal Grants
+# Incumbency and Federal Grants
 
 
 # Packages
@@ -85,12 +85,31 @@ fedgrant1 <- fedgrants_df %>%
   group_by(state_year_type) %>%
   mutate(average_grant=mean(grant_mil)) %>%
   mutate(new_grant=grant_mil/1000) %>%
+  mutate(total= sum(new_grant)) %>%
   mutate(election_year = ifelse(elxn_year==1,"Election Year","Non Election Year")) %>%
   distinct() %>%
   ggplot(aes(x=state_year_type,y=new_grant)) +geom_col(fill="green4") +
-  labs(title ="Total Federal Grants 2000 to 2016",
+  geom_text(aes(label = new_grant))  +
+  labs(title ="Total Federal Grants 2000 to 2008",
        subtitle="Why do some years see a spike in Federal Grants?",
-       x="Election Year",y= "Total Dollar Amount of Federal Grants in Billions")
+       x="Election Year",y= "Total Dollar Amount of Federal Grants in Billions") +
+  theme(plot.title = element_text(face = "bold",size=30))+
+  theme(plot.subtitle = element_text(face = "bold",size=29)) +
+  theme(plot.caption =element_text(face = "bold",size=27))+
+  labs(fill = "Party that Won the Popular Vote") +
+  theme(axis.title.x = element_text(size = 30),
+        axis.title.y = element_text(size = 30)) +
+  theme(
+    legend.title = element_text(color = "black", size = 29),
+    legend.text = element_text(color = "black", size = 29)
+  ) +
+  theme(axis.text.x = element_text(color = "black", size = 26, hjust = .5, vjust = .5, face = "plain"),
+        axis.text.y = element_text(color = "black", size = 26, angle = 0, hjust = 1, vjust = 0, face = "plain")) 
+
+
+
+
+ggsave("incumbent_grants.png", height = 13, width = 21)
 
 # Creating Baseline Data for Model
 
@@ -127,8 +146,19 @@ summary(model_fedgrants)
 
  fedgrants_2 <- fedgrants_df %>% 
    filter(!is.na(state_year_type)) %>%
+   
+   # Calculating change in percentages 
+   
+   mutate(growth_rate= grant_mil - lag(grant_mil)) %>%
+   
+   
+# Filtering for only election years
+   
+   filter(elxn_year==1) %>%
   group_by(year,state_year_type) %>%
-  mutate(total_year_grant=sum(grant_mil)) 
+   
+# Calculating 
+  mutate(total_growth_rate=mean(growth_rate)) 
  
  
  # New joined data
@@ -140,7 +170,7 @@ summary(model_fedgrants)
  
  #National Model
  
- model_fedgrants_2 <- lm(pv~avg_support + total_year_grant,data=data2)
+ model_fedgrants_2 <- lm(pv~avg_support + total_growth_rate,data=data2)
  summary(model_fedgrants_2)
  
  
@@ -152,7 +182,7 @@ summary(model_fedgrants)
  
  gt(table_poll) %>%
    tab_header(
-     title = "Federal Grants and Poll Support for Re-Election for Incumbant Parties",
+     title = "Federal Grants and Poll Support for Re-Election for Incumbent Parties",
      subtitle = "1984-2008"
    ) %>%
    fmt_number(columns=2:4,decimals = 4) 
@@ -166,13 +196,19 @@ summary(model_fedgrants)
  as.data.frame(data2)
  
  
- outsamp_mod  <- lm(pv ~ avg_support+total_year_grant,data2[data2$year!= 2004,])
+ outsamp_mod  <- lm(pv ~ avg_support+total_growth_rate,data2[data2$year!= 2004,])
  outsamp_pred <- predict(outsamp_mod, data2[data2$year == 2004,])
+ 
+ # Averaging the prediction vote share values
+ 
+ outsamp <- mean(outsamp_pred)
  outsamp_true <- data2$pv[data2$year == 2004] 
  
  
  
- # Predicted Bush with 50.57049 of the vote share, reality was 50.57049
+ # Predicted Bush with 51.29 of the vote share, reality was 50.57049
+ 
+ 51.29 - 50.57049
  
  
  #Graphing Residuals
@@ -201,14 +237,73 @@ summary(model_fedgrants)
    
 
 
- # Model Prediction for Donald Trump 2020
+ # Model Prediction for Donald Trump 2020 indepdent of corona
+ 
+ # Calcualting growth of federal spending
+ 
+ # Sources (https://www.cbo.gov/publication/56324,)
+ 
+ # 2019: 4.4 trillion 
+ # 2020: 4.79
+ 
+ (4.79-4.4)/4.4
  
  
  model_fedgrants_2 <- lm(pv~avg_support + total_year_grant,data=data2)
  summary(model_fedgrants_2)
  
- -5.6278266 +  (1.2011186*41) +
+ -44.75620 +(1.96972*41) + (0.08863636*0.16792) 
  
+ # Trump Pop vote Share= 36 percent
+ 
+ 
+ # Model predictions with corona, add federal budget with corona stimulus aid
+ 
+ # Corona Source : https://datalab.usaspending.gov/federal-covid-funding/
+ 
+ # New Spending 
+ 
+ ((4.79+2.59)-4.4)/4.4
+   
+ 
+ # New Calculations 
+ 
+ -44.75620 +(1.96972*41) + (0.6772727*0.16792) 
+   
+
+  # Map
+   
+covid <- read_csv("COVID - Sheet.csv",col_types = cols(
+     State = col_character(),
+     `Award Count` = col_number(),
+     Total = col_number()
+   ))
+ 
+ 
+ states_map <- map_data("state")
+ unique(states_map$region)
+ 
+ covid$region <- tolower(covid$State)
+ 
+ covid_map <- covid %>%
+   left_join(states_map, by = "region")
+ 
+ 
+ 
+ map <- ggplot(covid_map, aes(long, lat, group = group)) +
+   geom_polygon(aes(fill = Total), color = "black") +
+   scale_fill_gradient2(
+     high = "green3", 
+     mid = "white",
+     low = "yellow",
+     name = "Covid Grant Awarded",
+     breaks = c(0,500000000,1000000000,2000000000,4000000000), 
+     limits=c(0,4000000000)
+      ) +
+   theme_void()  
+ 
+ centroids <- data.frame(region=tolower(state.name), long=state.center$x, lat=state.center$y)
+ centroids$abb<-state.abb[match(centroids$region,tolower(state.name))]
  
 
 
