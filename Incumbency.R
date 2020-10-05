@@ -79,18 +79,22 @@ ggsave("incumbent_historical.png", height = 13, width = 21)
 
 # Second Graphic
 
+trial <- fedgrants_df %>%
+  filter(state_abb=="TX") %>%
+  mutate(total= sum(grant_mil))
+
 fedgrant1 <- fedgrants_df %>%
   filter(year > 1996) %>%
   filter(!is.na(state_year_type)) %>%
   group_by(state_year_type) %>%
   mutate(average_grant=mean(grant_mil)) %>%
+  mutate(total_1=sum(grant_mil)) %>%
   mutate(new_grant=grant_mil/1000) %>%
   mutate(total= sum(new_grant)) %>%
   mutate(election_year = ifelse(elxn_year==1,"Election Year","Non Election Year")) %>%
   distinct() %>%
   ggplot(aes(x=state_year_type,y=new_grant)) +geom_col(fill="green4") +
-  geom_text(aes(label = new_grant))  +
-  labs(title ="Total Federal Grants 2000 to 2008",
+  labs(title ="Total Federal Grants from 2000 to 2008",
        subtitle="Why do some years see a spike in Federal Grants?",
        x="Election Year",y= "Total Dollar Amount of Federal Grants in Billions") +
   theme(plot.title = element_text(face = "bold",size=30))+
@@ -108,8 +112,8 @@ fedgrant1 <- fedgrants_df %>%
 
 
 
-
 ggsave("incumbent_grants.png", height = 13, width = 21)
+
 
 # Creating Baseline Data for Model
 
@@ -213,7 +217,7 @@ summary(model_fedgrants)
  
  #Graphing Residuals
  
- res <- qplot(fitted(model_fedgrants_2), resid(model_fedgrants_2)) +
+ res <- qplot(fitted(model_fedgrants_2), resid(model_fedgrants_2),size=I(11)) +
    geom_smooth()
  res+geom_hline(yintercept=0) + 
    labs(title ="Fitted vs. Residuals",
@@ -252,7 +256,7 @@ summary(model_fedgrants)
  model_fedgrants_2 <- lm(pv~avg_support + total_year_grant,data=data2)
  summary(model_fedgrants_2)
  
- -44.75620 +(1.96972*41) + (0.08863636*0.16792) 
+ -44.75620 +(1.96972*41) + (8.8863636*0.16792) 
  
  # Trump Pop vote Share= 36 percent
  
@@ -268,7 +272,7 @@ summary(model_fedgrants)
  
  # New Calculations 
  
- -44.75620 +(1.96972*41) + (0.6772727*0.16792) 
+ -44.75620 +(1.96972*41) + (67.72727*0.16792) 
    
 
   # Map
