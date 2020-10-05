@@ -6,7 +6,7 @@ _**<font size="2"> October 3rd 2020 </font>**_
 
 **<font size="3"> Presidential Elections and Federal Grants  </font>**
 
-Many people wonder if incumbent parties and presidents benefit from incumbency. Is there something uniquely distinct about being an incumbent president? Is it the name recognition? The ability to use presidential powers to sway voters in the upcoming election? Some scholars argue that incumbency does not matter as much as we think, because of the Time for Change Model (the theory that after multiple years with the same party, voters are inclined to vote for the party, not in office). Nevertheless, I will explore the history of possible incumbency advantage and factor any findings in my model for the 2020 Presidential election.
+Many people wonder if incumbent parties and presidents benefit from incumbency. Is there something uniquely distinct about being an incumbent president? Is it the name recognition? The ability to use presidential powers to sway voters in the upcoming election? Some scholars argue that incumbency does not matter as much as we think, because of the Time for Change Model (the theory that after multiple years with the same party, voters are inclined to vote for the party not in office). Nevertheless, I will explore the history of possible incumbency advantage and factor any findings in my model for the 2020 Presidential election.
 
 
 ![Incumbent Federal Grants Historial](incumbent_historical.png)
