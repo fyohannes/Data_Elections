@@ -6,7 +6,7 @@ _**<font size="2"> October 3rd 2020 </font>**_
 
 **<font size="3"> Presidential Elections and Federal Grants  </font>**
 
-Many people wonder if Incumbent parties and presidents benefit from incumbency? Is there something uniquely distinct about being an incumbent president and running for president? Is it the name recognition? The ability to use presidential powers to sway voters in the upcoming election? While some scholars such as blank argue that incumbency does not matter as much as we think, because of the Time for Change Model (the theory that after multiple years with the same party, voters are inclined to vote for the party not in office). Nevethless, I will explore the history of a possible incumbency advantage and factor any findings in my model for the 2020 Presidential election.
+Many people wonder if incumbent parties and presidents benefit from incumbency? Is there something uniquely distinct about being an incumbent president and running for president? Is it the name recognition? The ability to use presidential powers to sway voters in the upcoming election? While some scholars such as blank argue that incumbency does not matter as much as we think, because of the Time for Change Model (the theory that after multiple years with the same party, voters are inclined to vote for the party not in office). Nevethless, I will explore the history of a possible incumbency advantage and factor any findings in my model for the 2020 Presidential election.
 
 
 ![Incumbent Federal Grants Historial](incumbent_historical.png)
@@ -28,34 +28,34 @@ I will now explore if there is any particular incumbency party advantage, partic
 
 In the graph above, I explore different grant amounts for election years vs non election years and swing states vs core states.For core statees we see 5.7 billion dollars awarded for election years and 16.23 awarded for non election years. For swing states we see 8.75 awarded during an election year and 24.1 during non election years.  When comparing swing states vs core states, we see that swing states on average recieve more federal funding than core states. Furthermore, there also is a considerable amount of federal grants awarded during election year. During election years, states recieve more federal grants than average. We can find this average by dividing the non election years by 3 and comparing it to the federal grants awarded during election years. For core states, they recieved on average around 4.07 billion, while swing states recieved around 8 billion . As we can see 5.7 billion is much higher than 4.07 billion, likewise with 8.75 billion as well. From this, it seems like there is evidence that the amount federal grants during election years, perhaps suggesting that this is one method in which incumbents/incumbent parties use their power to gain more support from the American peple. 
 
-
-
-**<font size="3">  COVID 19 </font>**
-
-This discussion in regard to federal funding is incredibly fascianting when considering the increased amount of federal spending in 2020 due to the coronavirus. Can federal spending on coronavirus help us predict the outcome of the 2020 election? Is it a reliable predictor variable?
-
-
-
-The map above shows us the amount of federal spending on coronavirus throughout the countries. Those with the largest aid awarded to them include California and New York, states that have large populations and have had larger coronarvius outbreaks since the middle of March. However, it is also to note that the next two states with the largest coronavirus grants awarded to them are Texas and Florida, a swing state. Other swing states that have recived a considerable amount of federal aid include Pennsylvania,North Carolina, Georgia, and Arizona. This is interesting to note as data from the New York Times shows that the states who have the largest number of cases per capita per week are actually not the ones who are getting the most funding.These states include South Dakota, North Darkota, Wisconsin, and Utah. I will note that there are large population differences between the aforemetnioned states and those states with the largest population, but it still is something interesting to consider? Is it just a coincidence that swing states are getting large amounts of federal aid (beyond the reason of larger populations)?
-
-
-
 **<font size="3">  Presidential Model: Predicting Outcome </font>**
 
-In my model, I decided to include federal grants as a predictor variable, alongside poll support averages from my last post []. When conducting my regression, I foung that the coefficent was _  the poll support coefficent was and the federal grant coefficent was . 
+I wanted to create a model that incorporated both poll support and change in federal grant averages for election years as predictor variables in my model. My first predictor variable is average poll support variable, something that I exlored in great detail in my last blog post. The second predictor variable is the average change in federal grant in election years.
+In my model, I decided to include federal grants as a predictor variable, alongside poll support averages from my last post []. When conducting my regression, I found that the intercept was -44.75, the poll support coefficent was 1.96, the federal grant coefficent was 0.1679.  
 
 
 #include table
 
-The table above shows that without any poll support and federal aid awarded throughout the coutnry, the incumbent party would expect to recieve. For percentage increase in poll support, the incumbent party would recieve an increase in the popular vote by and for every increase in federal aid dollar the incumbent could expect an increase of ___ in popular votes. 
+The table above shows that without any poll support and federal aid awarded throughout the coutnry, the incumbent party would expect to recieve -44.75, which of course is not actually possible. Futheremore, for each percentage increase in poll support, the incumbent party would recieve an increase in the popular vote by 1.96 and for every increase in percentage change in federal aid the incumbent could expect an increase of 0.1679 in popular votes. From this model, one can see that, poll support seems to have a much larger impact than the percent change in federal grant dollars. 
 
-The model's R squared value, which is 0.88, shows that this is a good fit for the model. I explored if this model was a good fit for the data in other ways, including out of sample testing for the 2004 election and graphing the residuals from the model
+Additionally, some other things I explored in regard to the model included the R squared value and a out of sample testing. The model's R squared value, is 0.89, which is quite close to 1 and shows that this model is a good fit for the data. Along with finding the R squared value, I calculated an out of sample testing for the 2004 election. When conducting this out of sample testing, the model predicted that Bush would recieve 51.29 percent of the popular vote,around 0.7 points higher than the true popular vote share, which was 50.57 percent. 
+
+After investigating the R squared value and conducting an out of sample test for my model, I graphed the residuals of my model to get a better sense of variation in the predicted vs true popular vote shares.
 
 
 ![Incumbent Federal Grants Residual Grants](incumbent_residuals.png)
 
 
 
+The graph above shows a plot where fitted values are on the x axis and residuals, the difference between the true and predicted value, are on the y axis. In an ideal model, we would want to the points centered around 0 because that would tell us that the residual values are small, which essentially demonstrates that the model is a good predictor. The graph above, is not centered around 0 and does have a great deal of outliers. However, part of this could be due to the small amount of data that we have. Our model uses data from 7 elections and perhaps if we had a larger sample/dataset, our model would be centered around 0. Despite the residuals, our R squared still shows that this model is a good fit for the data, so I still think there's value in using this to predict the 2020 election.
+
+
+
+**<font size="3">  Predicting the 2020 Outcome </font>**
+
+To predict the outcome of the 2020 election, I used the above model in two ways. For my first model, I inputted Trump's poll average of 41 percent and change in federal grant spending of 0.089 percent. For the federal grant spending, I used data[https://www.cbo.gov/publication/56324] to calulate the difference of spending from 2019 (4.4 trillion) and 2020 (4.79 trillion), disregarding additional federal spending on COVID. This model predicted that Trump would recieve around 36 percent of the popular vote. 
+
+I also used this model with slighlty different federal spending data. I used data [https://datalab.usaspending.gov/federal-covid-funding/] to calculate the federal spending growth rate with the inclusion of federal aid for Covid, which was an additional 2.59 trillion. Given this, the change in spending between 2019 and 2020 was not 8.9 percent, but rather close to 67 percent. Despite this increased spending, the model predicted that Trump would win 36.11 percent. Given this small increase in popular vote shares, one can assume that in this model, federal spending has little impact on popular vote shares.
 
 
 **<font size="3">  Conclusion </font>**
