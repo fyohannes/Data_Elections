@@ -30,8 +30,7 @@ In the graph above, I explore different grant amounts for election years vs non 
 
 **<font size="3">  Presidential Model: Predicting Outcome </font>**
 
-I wanted to create a model that incorporated both poll support and change in federal grant averages for election years as predictor variables in my model. My first predictor variable is average poll support variable, something that I exlored in great detail in my last blog post. The second predictor variable is the average change in federal grant in election years.
-In my model, I decided to include federal grants as a predictor variable, alongside poll support averages from my last post []. When conducting my regression, I found that the intercept was -44.75, the poll support coefficent was 1.96, the federal grant coefficent was 0.1679.  
+I wanted to create a model that incorporated both poll support and change in federal grant averages for election years as predictor variables in my model. My first predictor variable is average poll support variable, something that I exlored in great detail in my last blog post. The second predictor variable is the average change in federal grant in election years.In my model, I decided to include federal grants as a predictor variable, alongside poll support averages from my [last blog post](https://fyohannes.github.io/Data_Elections/Poll.html).
 
 
 #include table
@@ -53,9 +52,9 @@ The graph above shows a plot where fitted values are on the x axis and residuals
 
 **<font size="3">  Predicting the 2020 Outcome </font>**
 
-To predict the outcome of the 2020 election, I used the above model in two ways. For my first model, I inputted Trump's poll average of 41 percent and change in federal grant spending of 0.089 percent. For the federal grant spending, I used data[https://www.cbo.gov/publication/56324] to calulate the difference of spending from 2019 (4.4 trillion) and 2020 (4.79 trillion), disregarding additional federal spending on COVID. This model predicted that Trump would recieve around 36 percent of the popular vote. 
+To predict the outcome of the 2020 election, I used the above model in two ways. For my first model, I inputted Trump's poll average of 41 percent and change in federal grant spending of 0.089 percent. For the federal grant spending, I used [data](https://www.cbo.gov/publication/56324)to calulate the difference of spending from 2019 (4.4 trillion) and 2020 (4.79 trillion), disregarding additional federal spending on COVID. This model predicted that Trump would recieve around 36 percent of the popular vote. 
 
-I also used this model with slighlty different federal spending data. I used data [https://datalab.usaspending.gov/federal-covid-funding/] to calculate the federal spending growth rate with the inclusion of federal aid for Covid, which was an additional 2.59 trillion. Given this, the change in spending between 2019 and 2020 was not 8.9 percent, but rather close to 67 percent. Despite this increased spending, the model predicted that Trump would win 36.11 percent. Given this small increase in popular vote shares, one can assume that in this model, federal spending has little impact on popular vote shares.
+I also used this model with slighlty different federal spending data. I used [data](https://datalab.usaspending.gov/federal-covid-funding/) to calculate the federal spending growth rate with the inclusion of federal aid for Covid, which was an additional 2.59 trillion. Given this, the change in spending between 2019 and 2020 was not 8.9 percent, but rather close to 67 percent. Despite this increased spending, the model predicted that Trump would win 36.11 percent. Given this small increase in popular vote shares, one can assume that in this model, federal spending has little impact on popular vote shares.
 
 
 **<font size="3">  Conclusion </font>**
