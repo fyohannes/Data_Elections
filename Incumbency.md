@@ -54,7 +54,7 @@ After investigating the R squared value and conducting an out of sample test for
 
 
 
-The graph above shows a plot where fitted values are on the x-axis and residuals, the difference between the true and predicted value, are on the y-axis. In an ideal model, we would want the points centered around 0 because that would tell us that the residual values are small, which essentially demonstrates that the model is a good predictor. The graph above is not centered around 0 and does have plenty of outliers. However, part of this could be due to the small number of data that we have. Our model uses data from 7 elections and perhaps if we had a larger sample/dataset, our model would be more centered around 0. Despite the residuals, our R squared still shows that this model is a good fit for the data, so I still think there's value in using this to predict the 2020 election.
+The graph above shows a plot where fitted values are on the x-axis and residuals, the difference between the true and predicted value, are on the y-axis. In an ideal model, we would want the points centered around **_0_** because that would tell us that the residual values are small, which essentially demonstrates that the model is a good predictor. The graph above is not centered around 0 and does have plenty of outliers. However, part of this could be due to the small number of data that we have. Our model uses data from **_9_** elections and perhaps if we had a larger sample/dataset, our model would be more centered around **_0_** . Despite the residuals, our R squared still shows that this model is a good fit for the data, so I still think there's value in using this to predict the 2020 election.
 
 
 
