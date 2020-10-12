@@ -28,6 +28,8 @@ _**<font size="2"> October 10th 2020 </font>**_
 
 **<font size="3"> Social Media in the 2020 Election  </font>**
 
+![Advertisements 2020 Election](social_media.png)
+
 
 
 
