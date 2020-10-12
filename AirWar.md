@@ -29,7 +29,7 @@ As we've seen in the graphs, advertisements play a versatile role and have cover
 
 ![Advertisements 2020 Election](social_media.png)
 
-The graph above uses data from https://mediaproject.wesleyan.edu/releases-100120/#data and shows the leading advertisements teams in the number of ads. There is a mix of third party establishments, supporters of a particular candidate, and even a running candidate leading the way in advertisements. The top team teams include the Public Opinion Group and Keep Trump in Office Party. Something to note in this graphic is the "Vote by Mail 2020" page team. This definitely highlights some of the complexities that COVID-19 had introduced into this upcoming election. There is a large push to vote by mail this year; however, this issue has been very politicized, thus I wonder if the "Vote by Mail 2020" page team is endorsing/ supporting Biden, a proponent of voting by mail.
+The graph above uses [data](https://mediaproject.wesleyan.edu/releases-100120/#data) and shows the leading advertisements teams in the number of ads. There is a mix of third party establishments, supporters of a particular candidate, and even a running candidate leading the way in advertisements. The top team teams include the Public Opinion Group and Keep Trump in Office Party. Something to note in this graphic is the "Vote by Mail 2020" page team. This definitely highlights some of the complexities that COVID-19 had introduced into this upcoming election. There is a large push to vote by mail this year; however, this issue has been very politicized, thus I wonder if the "Vote by Mail 2020" page team is endorsing/ supporting Biden, a proponent of voting by mail.
 
 
 
@@ -57,7 +57,7 @@ Another interesting thing to consider is the effect of advertisements and voter 
 
 ![NC](NorthCarolina.png)
 
-The graphs above show win margins for Biden and Trump for the 8 important swing states that I identified in my first blog post. They depict regression models that predict Biden/Trump win margins given voter turnout for both Republicans and Democrats within the state (from 2016). To create these regression models, I looked at voter turnout by party from 2016 and current poll support averages in these states from 270 to win https://www.270towin.com/2020-polls-biden-trump/.
+The graphs above show win margins for Biden and Trump for the 8 important swing states that I identified in my first blog post. They depict regression models that predict Biden/Trump win margins given voter turnout for both Republicans and Democrats within the state (from 2016). To create these regression models, I looked at voter turnout by party from 2016 and current poll support averages in these states from [270 to win](https://www.270towin.com/2020-polls-biden-trump/).
 
 In these graphs, almost all the swing states showed a Biden win, except for Georgia. I'm hesitant to say that these are accurate predictions, especially for North Carolina, where a 20 percent win margin for Biden seems very unreasonably. Furthermore, I think the election race in Arizona will be a lot closer than what the model predicts now. Arizona was once known as a red state; however, in this upcoming election, it seems like the race in Arizona will be a lot closer. Additionally, from these graphs, we can see some swing states with smaller win margins for Biden, such as Florida, which shows a win margin of around 3 percent for Biden.
 
