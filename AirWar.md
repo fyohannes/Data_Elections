@@ -14,3 +14,30 @@ _**<font size="2"> October 10th 2020 </font>**_
 
 
 ![2008 and 2012](ad_issues_08.png)
+
+
+
+
+
+**<font size="3"> Campaign Advertisements State by State  </font>**
+
+
+
+
+
+
+**<font size="3"> Social Media in the 2020 Election  </font>**
+
+
+
+
+
+**<font size="3"> Conclusion </font>**
+
+
+
+
+
+
+
+
