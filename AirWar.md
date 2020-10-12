@@ -73,7 +73,7 @@ Let's applying these models to Florida, a swing state that has a relatively smal
 
 **<font size="3"> Conclusion </font>**
 
-Advertisements play an intersting role in elections. They're meant to persuade and incentvied voters to vote for a specific candidate. They have a variety of different purposes, from economic policy to making candidate appeals, and they cover a vast variety of different mediums, from T.V to social media.
+Advertisements play an intersting role in elections. They're meant to persuade and incentvied voters to vote for a specific candidate. They have a variety of different purposes, from economic policy to making candidate appeals, and they cover a vast variety of different mediums, from T.V to social media. As the elction draws closer, I'm interesting to see if advertisement strategies change and waht impact that will have, if any, on the outcome of the election.
 
 
 
