@@ -43,11 +43,21 @@ Another interesting thing to consider is the effect of advertisements and voter 
 
 
 
-![Southern Swing](air_war_states1.png)
+![Florida](Florida.png)
 
-![Midwest Swing](air_war_states2.png)
+![Arizona](Arizona.png)
 
-![Eastern Swing](air_war_states3.png)
+![Georgia](Georgia.png)
+
+![Michigan](Michigan.png)
+
+![Wisonsin](Wisconsin.png)
+
+![Minnesota](Minnestoa.png)
+
+![PA](PA.png)
+
+![NC](NorthCarolina.png)
 
 The graphs above show win margins for Biden and Trump for the 8 important swing states that I indentified in my blog post. They depict regression models that predict Biden/Trump win margins given voter turnout for both Republicans and Democrats within the state (from 2016). In order to create these regression models, I looked at voter turnout by party from 2016 and current poll support averages in these states from 270 to win https://www.270towin.com/2020-polls-biden-trump/.
 
@@ -56,10 +66,14 @@ In these graphs, almost all the swing states showed a Biden win, with the except
 
 **<font size="2"> Swing States and Advertisements </font>**
 
+Now that we've investigated the effects of poll support and voter turnout on win margins for swing states, we can use that data to include the effect of campaign advertisements. Gerber et al and Huber et al investigate this through the impact of GRPs on win margins. GRPs are gross point ratings and are calcualted by multiplying the reachable audience with the number of airings of advertisements. The two models differ slightly in their formulation. In Gerber's model an increase in 1,000 GRPs leads to an increase of the vote share of around 5 percent, while Huber estimates the increase in the vote share is around 7.5 percent.
+
+Let's applying these models to Florida, a swing state that has a relatively small win margin for Biden,accoording to our previous graphs. Using the Gerber, we see that an increase in 1000 GRPsn in the last week of the election, which is around 0.4-0.6 million dollars of advertisement, leads to a win margin for Trump around 6.22462 percent. For the Huber model, an increase in 1000 GRPs in the last week of the elction gives Trump a win margin of 6.229824. As we can see, both of these models predit similiar outcomes in terms of the inpact of increaed GRPs in the last week of the election.
 
 
 **<font size="3"> Conclusion </font>**
 
+Advertisements play an intersting role in elections. They're meant to persuade and incentvied voters to vote for a specific candidate. They have a variety of different purposes, from economic policy to making candidate appeals, and they cover a vast variety of different mediums, from T.V to social media.
 
 
 
