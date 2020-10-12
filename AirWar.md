@@ -34,6 +34,19 @@ _**<font size="2"> October 10th 2020 </font>**_
 
 
 
+**<font size="3"> Swing States  </font>**
+
+
+
+![Southern Swing](air_war_states1.png)
+
+![Midwest Swing](air_war_states2.png)
+
+![Eastern Swing](air_war_states3.png)
+
+
+
+
 **<font size="3"> Conclusion </font>**
 
 
