@@ -1,6 +1,6 @@
-**<font size="5"> Ground War: What impacts does it have?? </font>**
+**<font size="5"> Ground War: What impact does it have?? </font>**
 
-_**<font size="2"> October 10th 2020 </font>**_
+_**<font size="2"> October 18th 2020 </font>**_
 
 
 
