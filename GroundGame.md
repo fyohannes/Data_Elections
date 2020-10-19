@@ -72,7 +72,7 @@ I used [data](https://www.kff.org/other/state-indicator/distribution-by-raceethn
 
 In 2016, Clinton received around _**48**_ percent of the two-party vote share in Arizona, _**49**_ percent in Florida, and _**49.6**_ in Pennsylvania. While this model may be correct, something that makes me skeptical is the decrease in vote shares in Arizona. The race in Arizona is thought to be very tight in this upcoming race, thus, I would expect Biden to get a larger vote share.
 
-To look at the validity of this model, I did an out of sample prediction for 2016. My out of sample prediction predicted that for 2016, Clinton would receive _**46.7**_ percent of the vote share in Arizona, _**48**_ percent in Florida, and _**57.**_5 in Pennsylvania. The model's out of sample prediction for Arizona and Florida was around _**1-2_** points off for Arizona and Florida. However, the model's out of sample prediction was almost _**8**_ points higher for Clinton's vote share in Pennsylvania. Thus, this model does not seem to be a good fit for Pennsylvania. 
+To look at the validity of this model, I did an out of sample prediction for 2016. My out of sample prediction predicted that for 2016, Clinton would receive _**46.7**_ percent of the vote share in Arizona, _**48**_ percent in Florida, and _**57.5**_ percent in Pennsylvania. The model's out of sample prediction for Arizona and Florida was around _**1-2_** points off for Arizona and Florida. However, the model's out of sample prediction was almost _**8**_ points higher for Clinton's vote share in Pennsylvania. Thus, this model does not seem to be a good fit for Pennsylvania. 
 
 
 **<font size="3"> Conclusion </font>**
