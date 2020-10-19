@@ -58,11 +58,19 @@ In order to measure the relationship between demographics and election outcome, 
 In this model, the coefficents of our predictor variables are positive, thus we can see a postive correlation between increases in the population of Black, Hispanic, and Female indviduals. This model tells us that these individuals generally vote for the Democratic party and increased representation in the population for these groups will lead to increased votes for Democrats.
 
 
+
+In my second model, I wanted to combine these predictor variables with poll support in order to predict the outcome of the election. I used the predictor variables change in black and hispanic population as well as poll support to predict the outcome of Arizona, Florida, and Pennsylvania.
+
+
 ![Model 2](model2.png)
 
+This model shows us again, that there's a positive correlation with change in population for black and hispanic people with the Democratic vote share. Besides these two variables, it also includes variables for each region in the United States and their average support (or lack of support) for the Democratic candidate. For example, a state that is in the South East Central will have a decrease in Democratic vote shares by around 17 points, in comparison to the North East, which will only have a decrease in democratic vote shares by around 7 percent on average. 
 
+I used data [ https://www.kff.org/other/state-indicator/distribution-by-raceethnicity/?currentTimeframe=0&sortModel=%7B%22colId%22:%22Location%22,%22sort%22:%22asc%22%7D] to calculate the difference in demographcics from 2016 to 2018 (the year with the most recent data). Then I looked at 270 to win [https://www.270towin.com/2020-polls-biden-trump/] to look at the most recent poll data. After receving /calculating all of the releveant information, I filtered my model for each state and imputed these numbers into the model. My model predicted around 41.9 percent of the Democratic two party vote share for Arizona, 41.8 for Florida, and 56.8 percent for Pennsylvania. This model predicts that Biden will win Pennsylvania, but will lose Arizona and Florida.
 
-In my second model, I wanted to combine these predictor variables with poll support in order to predict the outcome of the election. 
+In 2016, Clinton recieved around 48 percent of the two party vote share in Arizona, 49 percent in Florida and 49.6 in Pennsylvania. While this model's may be correct, something that mkaes me skeptical is the decrease in vote shares in Arizona. The race in Arizona is thought to be very tight in this upcoming race, thus, I would expect Biden to get a larger vote share.
+
+In order to 
 
 
 
