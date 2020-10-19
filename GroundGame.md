@@ -51,10 +51,15 @@ The graph above shows the change in Arizona's demographics from 2000-2016. In 20
 In order to measure the relationship between demographics and election outcome, I created a model with demographic variables and poll support as the predictor variables for the two party Democratic vote share. My first model only looked at demographic variables, particulary the change in population for those who are Black, Hispanic,as well as Female. 
 
 
+![Model 1](Screen Shot 2020-10-19 at 10.02.06 AM.png)
 
 
 
 In this model, the coefficents of our predictor variables are positive, thus we can see a postive correlation between increases in the population of Black, Hispanic, and Female indviduals. This model tells us that these individuals generally vote for the Democratic party and increased representation in the population for these groups will lead to increased votes for Democrats.
+
+
+![Model 2](model_2.png)
+
 
 
 In my second model, I wanted to combine these predictor variables with poll support in order to predict the outcome of the election. 
