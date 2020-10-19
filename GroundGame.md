@@ -58,7 +58,7 @@ In order to measure the relationship between demographics and election outcome, 
 In this model, the coefficents of our predictor variables are positive, thus we can see a postive correlation between increases in the population of Black, Hispanic, and Female indviduals. This model tells us that these individuals generally vote for the Democratic party and increased representation in the population for these groups will lead to increased votes for Democrats.
 
 
-![Model 2](model_2.png)
+![Model 2](model2.png)
 
 
 
