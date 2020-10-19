@@ -70,8 +70,13 @@ I used data [ https://www.kff.org/other/state-indicator/distribution-by-raceethn
 
 In 2016, Clinton recieved around 48 percent of the two party vote share in Arizona, 49 percent in Florida and 49.6 in Pennsylvania. While this model's may be correct, something that mkaes me skeptical is the decrease in vote shares in Arizona. The race in Arizona is thought to be very tight in this upcoming race, thus, I would expect Biden to get a larger vote share.
 
-In order to 
+In order to look at the validity of this model, I did an out of sample prediction for 2016. My out of sample prediction, predicted that for 2016, Clinton would recieve 46.7 percent of the vote share in Airzona, 48 percent in Florida and 57.5 in Pennsylvania. The model's out of sample prediction for Arizona and and Florida was around 1-2 points off for Arizona and Florida. However, the model's out of sample prediction was almost 8 points higher for Clinton's vote share in Pennsylvanina. Thus, this model does not seem to be a good fit for Pennsylvania. 
 
+
+**<font size="3"> Conclusion </font>**
+
+
+Demographic changes are very interesting to consider in light of preisdential elections. As the makeup of our country changes, I am interested to see how demoographics will continue to impact politics and election outcomes.
 
 
 
