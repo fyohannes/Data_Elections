@@ -106,10 +106,10 @@ fo_add %>%
        subtitle = "Democrats tend to have more field offices than Republicans",
        x="Candidate",y= "Number of Field Offices") +
   labs(fill = "Party") +
-  theme(plot.title = element_text(face = "bold",size=25)) +
-  theme(legend.title = element_text(color = "gray1", size = 18),legend.key.width = unit(0.8,"cm"),legend.key.size = unit(0.8, "cm")) +
+  theme(plot.title = element_text(face = "bold",size=35)) +
+  theme(legend.title = element_text(color = "gray1", size = 29),legend.key.width = unit(0.8,"cm"),legend.key.size = unit(0.8, "cm")) +
   theme(
-    legend.text = element_text(color = "black", size = 17)
+    legend.text = element_text(color = "black", size = 29)
   )+
   theme(axis.text.x = element_text(color = "black", size = 27, hjust = .5, vjust = .5, face = "plain"),
         axis.text.y = element_text(color = "black", size = 27, angle = 0, hjust = 1, vjust = 0, face = "plain"))+
@@ -156,6 +156,10 @@ ggsave("field_offices_2016_swing.png", height = 13, width = 21)
 
 # Demographics Arizona
 
+ a <- demog %>%
+  filter(state=="AZ") %>%
+  filter(year>1999)
+
 # Gathering columns 
 
 demographics <- demog %>% gather(race, pop,Black,Hispanic,Indigenous,White,Asian)
@@ -164,26 +168,29 @@ demographics <- demog %>% gather(race, pop,Black,Hispanic,Indigenous,White,Asian
 
 demographics %>%
   filter(state=="AZ") %>%
-  filter(year>1999) %>%
+  filter(year>1999) %>% 
+  filter(!year %in% c("2001", "2003","2005","2007","2009","2011","2013","2015","2017")) %>%
+  filter(race != "Indigenous") %>%
   group_by(race) %>%
-  ggplot(aes(x=race,y=pop)) +geom_col() +facet_wrap(~year)  +
+  ggplot(aes(x=race,y=pop)) +geom_col() +facet_wrap(~year,scales = "free_x")  +
   labs(title ="Change in Arizona's Demographic 2000-2018",
        subtitle = "Former Red State turned Swing. Does Demographics come into Play?",
        x="Race",y= "Percentage of the Population")  +
   theme(plot.title = element_text(face = "bold",size=35))+
   theme(plot.subtitle = element_text(face = "bold",size=29)) +
   theme(plot.caption =element_text(face = "bold",size=27))+
-  theme(axis.title.x = element_text(size = 30),
+  theme(axis.title.x = element_text(size = 25),
         axis.title.y = element_text(size = 30)) +
   theme(
     legend.title = element_text(color = "black", size = 29),
     legend.text = element_text(color = "black", size = 29)
   ) +
   theme(axis.text.x = element_text(color = "black", size = 26, hjust = .5, vjust = .5, face = "plain"),
-        axis.text.y = element_text(color = "black", size = 26, angle = 0, hjust = 1, vjust = 0, face = "plain")) 
+        axis.text.y = element_text(color = "black", size = 26, angle = 0, hjust = 1, vjust = 0, face = "plain")) +
+  theme(strip.text.x = element_text(size = 26))
 
   
-ggsave("AZ_demographics.png", height = 13, width = 21)
+ggsave("AZ_demographics.png", height = 15, width = 21)
 
 
 # Merging the data 
@@ -197,6 +204,11 @@ pvstate_df <- read_csv("popvote_bystate_1948-2016.csv",col_types = cols(
   R_pv2p = col_double(),
   D_pv2p = col_double()
 ))
+
+
+hi <- pvstate_df %>%
+  filter(year==2016) %>%
+  filter(state=="PA")
 
 pollstate_df <- read_csv("pollavg_bystate_1968-2016.csv",col_types=cols(
   year = col_double(),
@@ -250,8 +262,8 @@ dat_change$region <- state.division[match(dat_change$state, state.abb)]
 demog$region <- state.division[match(demog$state, state.abb)]
 
 
-mod_demog_change <- lm(D_pv2p ~ Black_change + Hispanic_change + Asian_change +
-                         Female_change,data = dat_change)
+mod_demog_change <- lm(D_pv2p ~ Black_change + Hispanic_change +
+                         Female_change + as.factor(region),data = dat_change)
 
 summary(mod_demog_change)
 
@@ -269,13 +281,157 @@ table_demographics
 
 # Election Model with Multiple Variables
 
-model <-lm(R_pv2p ~ Black_change + Hispanic_change + avg_poll,data = dat_change)
+modeltrial <-lm(D_pv2p ~ Black_change + Hispanic_change,data = dat_change)
+summary(modeltrial)
 
+model <- lm(D_pv2p ~ Black_change + Hispanic_change +avg_poll + as.factor(region),data = dat_change)
 summary(model)
 
+# GT Table
 
+table_model <- tidy(model)
+
+gt(table_model) %>%
+  tab_header(
+    title = "Demographic Change and Poll Support on Demoratic Vote Shares in Presidential Elections",
+    subtitle = "1976-2016"
+  ) %>%
+  fmt_number(columns=2:4,decimals = 3) 
+
+table_model
 
 # Election Model for Swing States 
+
+
+### Arizona
+
+A <- dat_change %>%
+  filter(state=="AZ") %>%
+  filter(year==2016)
+
+#Change in hispanic
+
+(32-27.94139)/27.94139 = 0.1452544
+
+# Change in black
+
+(4-3.82)/3.82 =  0.04712042
+  
+  
+
+59.074 +2.194*( 0.04712042) + 0.349*(0.1452544) -0.004*(49) =  59.03208
+
+59.03208 -17.171 =  41.86108
+
+
+### Florida
+
+FL <- dat_change %>%
+  filter(state=="FL") %>%
+  filter(year==2016)
+
+
+#Change in hispanic
+
+(26-23.9)/23.9 = 0.08786611
+
+
+
+# Change in black
+
+(15-14.94)/14.94 = 0.004016064
+
+
+
+59.074 + 2.194*(0.004016064) + 0.349*(0.08786611) -0.004*(49) =  58.91748
+
+58.91748 - 17.125 = 41.79248
+
+
+
+
+#### PA
+
+
+PA <- dat_change %>%
+  filter(state=="PA") %>%
+  filter(year==2016)
+
+#Change in hispanic
+
+(8-6.02)/6.02 = 0.3289037
+
+
+# Change in black
+
+(10-10.69)/10.69 =  -0.0645463
+
+
+59.074 + 2.194*(-0.0645463) + 0.349*(0.3289037) -0.004*(49) = 58.85117
+
+58.85117 - 2.041 = 56.81017
+
+
+# Out of Sample Prediction 
+
+
+model <- lm(D_pv2p ~ Black_change + Hispanic_change +avg_poll + as.factor(region),data = dat_change)
+
+model_AZ <- dat_change %>%
+  filter(state=="AZ")
+
+#### Arizona 
+
+outsamp_mod  <- lm(D_pv2p ~ Black_change +Hispanic_change + avg_poll + as.factor(region),model_AZ[model_AZ$year!= 2016,])
+outsamp_pred <- predict(outsamp_mod, model_AZ[model_AZ$year == 2016,])
+
+# Averaging the prediction vote share values
+
+outsamp <- mean(outsamp_pred)
+outsamp_true <- model_AZ$D_pv2p[model_AZ$year == 2016] 
+
+
+### Florida
+
+model_FL <- dat_change %>%
+  filter(state=="FL")
+
+
+outsamp_mod  <- lm(D_pv2p ~ Black_change +Hispanic_change + avg_poll + as.factor(region),model_FL[model_FL$year!= 2016,])
+outsamp_pred <- predict(outsamp_mod, model_FL[model_FL$year == 2016,])
+
+# Averaging the prediction vote share values
+
+outsamp <- mean(outsamp_pred)
+outsamp_true <- model_FL$D_pv2p[model_FL$year == 2016] 
+
+
+### PA
+
+model_PA <- dat_change %>%
+  filter(state=="PA")
+
+
+outsamp_mod  <- lm(D_pv2p ~ Black_change +Hispanic_change + avg_poll + as.factor(region),model_PA[model_PA$year!= 2016,])
+outsamp_pred <- predict(outsamp_mod, model_PA[model_PA$year == 2016,])
+
+# Averaging the prediction vote share values
+
+outsamp <- mean(outsamp_pred)
+outsamp_true <- model_PA$D_pv2p[model_PA$year == 2016] 
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 
