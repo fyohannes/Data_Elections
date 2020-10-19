@@ -62,7 +62,9 @@ In this model, the coefficents of our predictor variables are positive, thus we 
 In my second model, I wanted to combine these predictor variables with poll support in order to predict the outcome of the election. I used the predictor variables change in black and hispanic population as well as poll support to predict the outcome of Arizona, Florida, and Pennsylvania.
 
 
-![Model 2](model2.png)
+![Model 2 PART A ](Screen Shot 2020-10-19 at 10.30.30 AM.png)
+
+![Model 2 PART B ](Screen Shot 2020-10-19 at 10.30.41 AM.png)
 
 This model shows us again, that there's a positive correlation with change in population for black and hispanic people with the Democratic vote share. Besides these two variables, it also includes variables for each region in the United States and their average support (or lack of support) for the Democratic candidate. For example, a state that is in the South East Central will have a decrease in Democratic vote shares by around 17 points, in comparison to the North East, which will only have a decrease in democratic vote shares by around 7 percent on average. 
 
