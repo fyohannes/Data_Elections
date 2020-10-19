@@ -41,12 +41,23 @@ Throughout the entire 2020 election, Arizona has been deemed a swing state. A hi
 
 ![AZ Demographics](AZ_demographics.png)
 
-The graph above shows the change in Arizona's demographics from 2000-2016. In 2000, the population of white people was over 60 percent and 
+The graph above shows the change in Arizona's demographics from 2000-2016. In 2000, white people made up around 69 percent of the population, black people 3 percent, and hispanics 22 percent. By 2018, white people made up only 59 percent of the population, black people around 4.6 percent, and hispanics around 29 percent.Over the last 18 years, the population of Hispanic people has increased, while the population of white peoople have decreased. Since Hispanics are more likely to vote for Democrats, this could be one of the reasons why Arizona has now become a swing state. But how can one attribute demographic statistics to election outcomes? Does it matter?
 
 
 
 
 **<font size="3"> Election Model with Demographic Data </font>**
+
+In order to measure the relationship between demographics and election outcome, I created a model with demographic variables and poll support as the predictor variables for the two party Democratic vote share. My first model only looked at demographic variables, particulary the change in population for those who are Black, Hispanic,as well as Female. 
+
+
+
+
+
+In this model, the coefficents of our predictor variables are positive, thus we can see a postive correlation between increases in the population of Black, Hispanic, and Female indviduals. This model tells us that these individuals generally vote for the Democratic party and increased representation in the population for these groups will lead to increased votes for Democrats.
+
+
+In my second model, I wanted to combine these predictor variables with poll support in order to predict the outcome of the election. 
 
 
 
