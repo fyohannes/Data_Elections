@@ -17,3 +17,5 @@ Whenever you commit to this repository, GitHub Pages will run [Jekyll](https://j
 [06.Air War](AirWar.md)
 
 [07.Ground Game](GroundGame.md)
+
+[08.Shocks](Shocks.md)
