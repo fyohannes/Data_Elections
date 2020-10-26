@@ -1,6 +1,6 @@
 **<font size="5"> Shocks: Can Unplanned Events Affect the Election? </font>**
 
-_**<font size="2"> September 26th 2020 </font>**_
+_**<font size="2"> October 26th 2020 </font>**_
 
 
 
