@@ -8,7 +8,7 @@ _**<font size="2"> October 26th 2020 </font>**_
 
 The world is filled with many unprecedented and unplanned events. For example, sometimes war occurs, natural disasters, famine, and as we all know by now, health crises such as a pandemic. All of these events have a real impact on people throughout the world. They can lead to increased hardships, and unfortunately, the loss of many lives. 
 
-What impact does this have on presidential elections? Some, such as Achen and Bartels, claim that unprecedented events may have an impact on vote share. For example, they claim that the increase in shark attacks in New Jersey during the re-election of Woodrow Wilson lead to a decline in the popular vote share in beach towns. Thus, they found that places that experienced increase shark attacks were more likely to vote against Wilson. Is this a random coincidence? What does this mean in our understanding of COVID and its possible impact on the 2020 election?
+What impact does this have on presidential elections? Some, such as Achen and Bartels (2017), claim that unprecedented events may have an impact on vote share. For example, they claim that the increase in shark attacks in New Jersey during the re-election of Woodrow Wilson lead to a decline in the popular vote share in beach towns. Thus, they found that places that experienced increase shark attacks were more likely to vote against Wilson. Is this a random coincidence? What does this mean in our understanding of COVID and its possible impact on the 2020 election?
 
 
 
