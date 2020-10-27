@@ -38,7 +38,7 @@ When comparing the number of cases per capita, the United States, has had more c
 
 **<font size="3"> Impact of COVID-19 </font>**
 
-While the impact of COVID-19 on this upcoming election is hard to measure, one way to look at the impact of COVID-19 could be by analyzing COVID-19 deaths and demographic shifts. It is widely known that Black and Latino populations are disproportionately affected by the virus. Data shows that **_1 in 920**_ Black Americans has died, while **_1 in 1,360**_ Latino Americans. 
+While the impact of COVID-19 on this upcoming election is hard to measure, one way to look at the impact of COVID-19 could be by analyzing COVID-19 deaths and demographic shifts. It is widely known that Black and Latino populations are disproportionately affected by the virus. [Data] shows that (https://www.apmresearchlab.org/covid/deaths-by-race) in the United States **_1 in 920**_ Black Americans have died, while **_1 in 1,360**_ Latino Americans have died.
 
 In order to investigate the impact of these deaths, I created a model that predicted democrat popular vote share with demographic variables, change in the Black population, and change in the Latino population. I particularly created this model to look at two swing states that have been heavily affected by the virus: Arizona and Flordia. 
 
