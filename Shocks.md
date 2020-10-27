@@ -38,11 +38,11 @@ When comparing the number of cases per capita, the United States, has had more c
 
 **<font size="3"> Impact of COVID-19 </font>**
 
-While the impact of COVID-19 on this upcoming election is hard to measure, one way to look at the impact of COVID-19 could be by analyzing COVID-19 deaths and demographic shifts. It is widely known that black and latino populations are disproportionatley affected by the virus. Data shows that 1 in 920 Black Americans have died, while 1 in 1,360 Latino Americans. 
+While the impact of COVID-19 on this upcoming election is hard to measure, one way to look at the impact of COVID-19 could be by analyzing COVID-19 deaths and demographic shifts. It is widely known that Black and Latino populations are disproportionately affected by the virus. Data shows that 1 in 920 Black Americans has died, while 1 in 1,360 Latino Americans. 
 
-In order to investigate the impact of these deaths, I created a model that predicted democrat popular vote share with demographic variables, change in black population, and change in latino population. I particulary created this model to look at two swing states that have been heavily affected by the virus: Arizona and Flordia. 
+In order to investigate the impact of these deaths, I created a model that predicted democrat popular vote share with demographic variables, change in the Black population, and change in the Latino population. I particularly created this model to look at two swing states that have been heavily affected by the virus: Arizona and Flordia. 
 
-My Arizona model returned an intercept of 46.674, a black change in population coefficent of -7.007, and a hispanic change in population coefficent of 0.331. Thus, without any change in the population demographics, Democrats are predicted to win 46.674 percent of the two party vote, thus making it a red state. Additonally, my Florida model returned an intercept of 49.20, a black change in population coefficent of 7.06, and a hispanic change in population coefficent of -0.4386. 
+My Arizona model returned an intercept of 46.674, a Black change in population coefficient of -7.007, and a Hispanic change in population coefficient of 0.331. Thus, without any change in the population demographics, Democrats are predicted to win 46.674 percent of the two-party vote, thus making it a red state. Additionally, my Florida model returned an intercept of 49.20, a black change in population coefficient of 7.06, and a Hispanic change in population coefficient of -0.4386. 
 
 To calculate the impact of COVID-19 deaths on the outcome of the election, I assumed that covid related deaths were the only factors that would shift the demographic data. When I imputed this data into my model, my model for Arizona predicted a democratic vote share of 46.65 and my Florida model predicted a democratic vote share of 49.19602.
 
@@ -50,5 +50,4 @@ To calculate the impact of COVID-19 deaths on the outcome of the election, I ass
 
 **<font size="3"> Conclusion </font>**
 
-While it seems like COVID related deaths have a small impact on changing demograhic variables, and thus the outcome of the election in the aforementioned predictor variables, COVID could still have an impact on people's opinion of the incumbent, Donald Trump. Some may think he's handling the pandemic well, while others may think his handling of the pandemic is a failure. Neverthless, the impact of COVID-19 on the upcoming election is hard to measure. 
-
+While it seems like COVID related deaths have a small impact on changing demographic variables, and thus the outcome of the election in the aforementioned predictor variables, COVID could still have an impact on people's opinion of the incumbent, Donald Trump. Some may think he's handling the pandemic well, while others may think his handling of the pandemic is a failure. Nevertheless, the impact of COVID-19 on the upcoming election is hard to measure. 
