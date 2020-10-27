@@ -35,3 +35,20 @@ The graph above compares COVID-19 cases per capita in three countries, the Unite
 
 When comparing the number of cases per capita, the United States, has had more cases per capita out of all three countries with a rate of 0.02 percent in October. Despite very limited social distancing protocols, Sweden only has a rate of 0.009 percent in Sweden. While one would initially believe for Sweden to have a higher rate per capita, the United States' large population may be one of the reasons why the United States has experienced many cases. On the other hand, South Korea's per capita rate is much smaller, at a rate of 0.0005 percent. Nevertheless, rates amongst all three countries are increasing, thus showing that the fight against the pandemic is far from over.
 
+
+**<font size="3"> Impact of COVID-19 </font>**
+
+While the impact of COVID-19 on this upcoming election is hard to measure, one way to look at the impact of COVID-19 could be by analyzing COVID-19 deaths and demographic shifts. It is widely known that black and latino populations are disproportionatley affected by the virus. Data shows that 1 in 920 Black Americans have died, while 1 in 1,360 Latino Americans. 
+
+In order to investigate the impact of these deaths, I created a model that predicted democrat popular vote share with demographic variables, change in black population, and change in latino population. I particulary created this model to look at two swing states that have been heavily affected by the virus: Arizona and Flordia. 
+
+My Arizona model returned an intercept of 46.674, a black change in population coefficent of -7.007, and a hispanic change in population coefficent of 0.331. Thus, without any change in the population demographics, Democrats are predicted to win 46.674 percent of the two party vote, thus making it a red state. Additonally, my Florida model returned an intercept of 49.20, a black change in population coefficent of 7.06, and a hispanic change in population coefficent of -0.4386. 
+
+To calculate the impact of COVID-19 deaths on the outcome of the election, I assumed that covid related deaths were the only factors that would shift the demographic data. When I imputed this data into my model, my model for Arizona predicted a democratic vote share of 46.65 and my Florida model predicted a democratic vote share of 49.19602.
+
+
+
+**<font size="3"> Conclusion </font>**
+
+While it seems like COVID related deaths have a small impact on changing demograhic variables, and thus the outcome of the election in the aforementioned predictor variables, COVID could still have an impact on people's opinion of the incumbent, Donald Trump. Some may think he's handling the pandemic well, while others may think his handling of the pandemic is a failure. Neverthless, the impact of COVID-19 on the upcoming election is hard to measure. 
+
