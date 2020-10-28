@@ -16,6 +16,14 @@ _**<font size="2"> October 28th 2020 </font>**_
 ![Swing States Covid](swingstates_covid.png)
 
 
+average support for trump: 43.1
+average support for biden: 51.6 
+https://projects.fivethirtyeight.com/polls/president-general/national/
+
+
+https://www.bea.gov/news/2020/gross-domestic-product-fourth-quarter-and-year-2019-advance-estimate#:~:text=Real%20gross%20domestic%20product%20(GDP,real%20GDP%20increased%202.1%20percent. (2.1 gdp growth)
+
+
 
 
 
