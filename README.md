@@ -19,3 +19,5 @@ Whenever you commit to this repository, GitHub Pages will run [Jekyll](https://j
 [07.Ground Game](GroundGame.md)
 
 [08.Shocks](Shocks.md)
+
+[09.Final Predictions](Final Predictions.md)
