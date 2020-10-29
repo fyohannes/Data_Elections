@@ -13,14 +13,20 @@ In my model, I decided to use GDP growth, poll support, and change in federal sp
 Overall, I used these three variables in my model to predict the national and state by state outcome for this upcoming presidential election.
 
 
-
-
-
 **<font size="3"> National Model </font>**
 
+As I mentioned in my introudction, I operationalized the variables, GDP growth, change in federal spending, and poll support in my model to predict the presidential election of 2020.
 
 
 **<font size="2"> Explaining the Variables Further </font>**
+
+While historically, there has been a strong correlation with 2nd quarter GDP growth and presidnetial outcomes, I actually decided to use 2019 quarter 4 GDP as my variable of choice. The main reason why I decided to do this was because of the effect that COVID has had on the economy, both in the first quarter and in the second quarter of 2020 (mostly in the second quarter). Becuase the economy has declined due to a public health crisis and not a financial crisis, people's perception of the impact of this current recession may be different. Quarter 2 GDP growth has been a good predictor variable historically because it allows for voters to attribute blame and success to the incumbent or incumbent party. However, if voters percieve this economic crisis as an independent and uncontrollable event, it attributing blame and success becomes much more difficult. Thus, some voters may weigh economic conditions from end of 2019 more heavily than that of 2020. It is for this reason, why I decided to use 2019 Q4 data rather than 2020 Q2.
+
+data source for gdp data:
+
+data source federal spending data:
+
+Additionally, I used change in federal spending, as my other economic predictor variable. 
 
 
 
