@@ -22,16 +22,18 @@ As I mentioned in my introudction, I operationalized the variables, GDP growth, 
 
 While historically, there has been a strong correlation with 2nd quarter GDP growth and presidnetial outcomes, I actually decided to use 2019 quarter 4 GDP as my variable of choice. The main reason why I decided to do this was because of the effect that COVID has had on the economy, both in the first quarter and in the second quarter of 2020 (mostly in the second quarter). Becuase the economy has declined due to a public health crisis and not a financial crisis, people's perception of the impact of this current recession may be different. Quarter 2 GDP growth has been a good predictor variable historically because it allows for voters to attribute blame and success to the incumbent or incumbent party. However, if voters percieve this economic crisis as an independent and uncontrollable event, it attributing blame and success becomes much more difficult. Thus, some voters may weigh economic conditions from end of 2019 more heavily than that of 2020. It is for this reason, why I decided to use 2019 Q4 data rather than 2020 Q2.
 
-data source for gdp data:
+Additionally, I used change in federal spending as my other economic predictor variable.  For the federal grant spending, I used data to calculate the difference in spending from 2019 (4.4 trillion) and 2020 (4.79 trillion), disregarding additional federal spending on COVID. I decided to disregard the increase in federal spending data due to COVID because of the difficulty to weight its impact. Federal spending on COVID is used as a way to combat the nation's economic decline in the wake of a public health crisis, thus, it may be perceived differently than transfers such as Social Security or federal grants for better schools. Furthermore, I think including federal data for COVID would greatly skew our preedicitions. When I calculated the federal spending growth rate with the inclusion of federal aid for COVID, it amounted to an additional 2.59 trillion. Given this, the change in spending between 2019 and 2020 was not 8.9 percent, but rather close to 67 percent. If I were to include this 67 percent increase, predictions would highly favor the incumbent party, since federal grant growth rates have a positive relationship with vote shares for incumbent parties.
 
-data source federal spending data:
-
-Additionally, I used change in federal spending, as my other economic predictor variable. 
-
+The last variable that I used was poll support averages. I used all poll data, regardless of grade, with an equal weight; however, I did filter, for poll data from the last 9 weeks. Then from that poll data, I found the average poll support for each state and for the country as a whole.
 
 
 
 **<font size="2"> The Model </font>**
+
+As I've mentioned the national model uses GDP growth, federal spending, and poll support to predict election outcomes. 
+
+
+The summary of the regression model shows 
 
 
 
@@ -39,9 +41,6 @@ average support for trump: 43.1
 average support for biden: 51.6 
 https://projects.fivethirtyeight.com/polls/president-general/national/
 
-
-
-https://www.bea.gov/news/2020/gross-domestic-product-fourth-quarter-and-year-2019-advance-estimate#:~:text=Real%20gross%20domestic%20product%20(GDP,real%20GDP%20increased%202.1%20percent. (2.1 gdp growth)
 
 
 **<font size="2"> 2020 National Outcome </font>**
@@ -68,6 +67,21 @@ https://www.bea.gov/news/2020/gross-domestic-product-fourth-quarter-and-year-201
 
 
 **<font size="3"> Some Limitations of the Model </font>**
+
+
+
+
+**<font size="3"> Sources</font>**
+
+[data](https://www.kff.org/other/state-indicator/distribution-by-raceethnicity/?currentTimeframe=0&sortModel=%7B%22colId%22:%22Location%22,%22sort%22:%22asc%22%7D)
+
+[Data source for GDP data](https://www.bea.gov/news/2020/gross-domestic-product-fourth-quarter-and-year-2019-advance-estimate#:~:text=Real%20gross%20domestic%20product%20(GDP,real%20GDP%20increased%202.1%20percent)
+
+[Data source federal spending data]()
+
+[Data source for COVID spending](https://datalab.usaspending.gov/federal-covid-funding/)
+
+[Poll Data: 270 to Win](https://www.270towin.com/2020-polls-biden-trump/)
 
 
 
