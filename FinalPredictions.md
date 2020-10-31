@@ -77,11 +77,11 @@ After calculating the popular vote share for Trump, I then calculated a predicti
 
 
 
-
-
 **<font size="3"> Some Limitations of the Model </font>**
 
-There are many limitations that occur 
+There are many limitations to the aforementioned models. My national model is focused on economic fundamentals and polls, two variables that have historically been a good predictor of national outcomes. Not using other predictor variables such as campaign spending or advertisements may inhibit my model somewhat; however, based on previous blog posts, it seemed like fundamentals and polls were better predictor variables. Thus, while not including dynamic variables, may somewhat inhibit my model, I still believe the model that I created is a good fit for the data.
+
+Furthermore, this election is unlike any other. COVID-19 has greatly changed the landscape of this election and has added a lot of unpredictable factors. As I've stated before, I tried to control for some of the irregularities brought by COVID by using 2019 Q4 GDP growth and change in federal spending, without COVID related grants. Although I controlled as best as possible, COVID's impact on the economy could skew my prediction in unknown ways.
 
 
 
@@ -89,14 +89,17 @@ There are many limitations that occur
 
 [Data source for GDP data](https://www.bea.gov/news/2020/gross-domestic-product-fourth-quarter-and-year-2019-advance-estimate#:~:text=Real%20gross%20domestic%20product%20(GDP,real%20GDP%20increased%202.1%20percent)
 
-[Data source federal spending data]()
+[Data source federal spending data](https://www.cbo.gov/publication/56324)
 
 [Data source for COVID spending](https://datalab.usaspending.gov/federal-covid-funding/)
 
 [Poll Data: 270 to Win](https://www.270towin.com/2020-polls-biden-trump/)
 
 
+_Special thanks to Cassidy Bargell for her help on my state prediciton model!_
 
 
 **<font size="3"> Final Thoughts </font>**
+
+This election is far from usual. Regardless of political affiliation, this election is incredibly high-stakes. Many issues are affecting American society, from climate change to racial injustice, reproductive health, and of course a global pandemic that is at the forefront of this election and consequently the next for years. While the majority of my blog post has been focused on the data behind election outcome, I wanted to take the time to say that this election is a lot more than just numbers and regressions, it will have a tangible impact on the people of this country.
 
