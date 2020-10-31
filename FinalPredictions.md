@@ -50,13 +50,15 @@ Besides conducting an out of sample prediction, I also looked at the fitted valu
 
 
 
-The graph above shows 
+The graph above shows the variation between the fitted and residuals values in my model. The majority of my data points lay on the horiziontal line where y=0, which shows that there is no variation between the true and predicted values. Ideally, we would want all of our data points to lay on this line, however, since the majoirty of our data points seem to be between the y values of -2 and 2, it seems like the model is fairly accurate.
 
 
 
 **<font size="2"> 2020 National Outcome </font>**
 
+Using my national model, I was able to predict that Trump would lose the popular vote share. In order to come to this result, I imputed poll support, 2019 Q4 GDP growth, and change in federal spending for 2020. For the independent variable, poll support, I imputed a poll support average of 43.1. I recieved this number from 270 to win's national poll, which averages all of the polls from the last month. Additionally I imputed the change in federal spending of 8.9 percent and imputed 2019 Q4 GDP growth which was 2.1. Once I put all of this information into my model, I calculated that Trumpn would win 44.95 percent of the popular vote, essentially losing the popular vote.
 
+After calculating the popular vote share for Trump, I then calculated a predicitve interval for my outcome. My predictive interval showed that the lower bound of the popualar vote is 40.59024 and the higher bound of the popular vote is 49.38243. Thus, there is a 95 percent chance that the true value, the real outcome of Trump's popular vote share, lies in between the lower and upper bound. This predictive interval is a large spread and does show quite a lot of uncertainity. Despite this uncertainty, this interval shows that there's a strong likelihood that Trumo will recieve less than 50 percent of the popular vote share.
 
 
 
@@ -79,12 +81,11 @@ The graph above shows
 
 **<font size="3"> Some Limitations of the Model </font>**
 
+There are many limitations that occur 
 
 
 
 **<font size="3"> Sources</font>**
-
-[data](https://www.kff.org/other/state-indicator/distribution-by-raceethnicity/?currentTimeframe=0&sortModel=%7B%22colId%22:%22Location%22,%22sort%22:%22asc%22%7D)
 
 [Data source for GDP data](https://www.bea.gov/news/2020/gross-domestic-product-fourth-quarter-and-year-2019-advance-estimate#:~:text=Real%20gross%20domestic%20product%20(GDP,real%20GDP%20increased%202.1%20percent)
 
@@ -93,7 +94,6 @@ The graph above shows
 [Data source for COVID spending](https://datalab.usaspending.gov/federal-covid-funding/)
 
 [Poll Data: 270 to Win](https://www.270towin.com/2020-polls-biden-trump/)
-
 
 
 
