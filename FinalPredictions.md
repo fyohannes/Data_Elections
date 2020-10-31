@@ -33,13 +33,24 @@ The last variable that I used was poll support averages. I used all poll data, r
 As I've mentioned the national model uses GDP growth, federal spending, and poll support to predict election outcomes. 
 
 
-The summary of the regression model shows 
+![National Model Summary](Screen Shot 2020-10-30 at 10.40.07 PM.png)
+
+
+The summary of the regression model shows an intercept of -3 percent. Thus, if an incumbent has no support from the polls, if there's no GDP growth, and no increase in federal spending, an incumbent candidate can expect to recieve -3 percent of the vote (this of course isn't physically possible, but goes to show how little incumbent presidents would recieve in popular vote shares. The coefficent for average poll support is 1.096, thus every point increase in poll support will lead to a 1.096 increase in popular vote share. Additionally, the coefficent for total growth rate is 0.0679, thus every point increase in yearly federal spending will amount to an increase in the popular vote share by 0.0679. Finally, the last coefficent, GDP growth qt, is 0.0545, showing that a one point percentage increase will lead to a 0.0545 increase in the popular vote share.
+
+The adjusted R squared of this model is around 0.91, thus showing that the model seems to be quite a good fit for the data. While the in model validation seems to show that this is a good model, I also did an out of sample validation test. 
+
+I created an out of sample validation test to see if this model was a good predictor for years prior. I conducted an out of sample validation for each election year from 1996-2008 (as some of my datasets ony include data until 2008). In 1996, my model predicted that Clinton would recieve 50.84 percent of the vote when he actually recieved 49.1 percent of the vote.For the year 2000, my model predicted, that Al Gore recieved 44.033 percent of the popular vote, when in reality he recieved 48.1 percent of the vote. In 2004, my model predicted that Bush would recieve 50.33 percent of the vote when he recieved 50.6 percent of the vote. In 2008, my model predicted that John McCain would recieve 45.38 of the popular vote and he recieved 45.4 of the popular vote. 
+
+Besides conducting an out of sample prediction, I also looked at the fitted values versus residual values in my model. I used this as another way to measure the accuracy of my model and to visualize the variation between predicted and actual values.
 
 
 
-average support for trump: 43.1
-average support for biden: 51.6 
-https://projects.fivethirtyeight.com/polls/president-general/national/
+![National Residuals](national_residuals.png)
+
+
+
+The graph above shows 
 
 
 
