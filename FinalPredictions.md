@@ -108,6 +108,7 @@ Furthermore, this election is unlike any other. COVID-19 has greatly changed the
 
 **<font size="3"> Sources</font>**
 
+
 [Data source for GDP data](https://www.bea.gov/news/2020/gross-domestic-product-fourth-quarter-and-year-2019-advance-estimate#:~:text=Real%20gross%20domestic%20product%20(GDP,real%20GDP%20increased%202.1%20percent)
 
 [Data source federal spending data](https://www.cbo.gov/publication/56324)
