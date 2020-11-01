@@ -7,6 +7,8 @@ library(tidyr)
 library(ggplot2)
 library(dplyr)
 library(maps)
+library(googlesheets4)
+library(usmap)
 library(cowplot)
 library(grid)
 library(gridExtra)
@@ -17,13 +19,12 @@ library(ggrepel)
 
 library(broom)
 library(statebins)
+library(googlesheets4)
 library(gt)
 
 # For the regression summary table 
 
 library(tidyverse)
-
-
 
 
 # Creating the Final model--- using poll averages, economic data, and change in federal grants
@@ -221,14 +222,13 @@ fedgrants_3 <- fedgrants_2 %>%
 data_state <- data3 %>%
   left_join(fedgrants_3,by=c("state","year"))
 
-data_state <- data_state %>%
-  filter(incumbent_party=="TRUE")
+
   
 
 
 # Creating State by State Model
 
-state_model <- lm(D_pv2p~avg_support + growth_rate + GDP_growth_qt ,data=data_state)
+state_model <- lm(D_pv2p~ avg_support + growth_rate + GDP_growth_qt ,data=data_state)
 summary(state_model)
 
 
@@ -239,7 +239,7 @@ growth_rate <- c(8.9,8.9,8.9,8.9,8.9,8.9,8.9,8.9,8.9,8.9,8.9,8.9,8.9,8.9,8.9,8.9
 avg_support <- c(39,44,47,35,62,52,64,58,50,49,64,39,60,42,47,42,40,37,51,60,67,51,50,40,45,45,45,49,53,57,53,61,48,39,47,39,60,51,68,43,42,40,46,39,67,53,58,38,52,33)
 
 
-# Trying Cass Code
+# Trying Cass and Sun Young Code
 
 states_list <- c("AL","AK","AZ","AR","CA","CO","CT","DE","FL","GA","HI","ID","IL","IN","IA","KS","KY","LA","ME","MD","MA","MI","MN","MS","MO","MT","NE","NV","NH","NJ","NM","NY","NC","ND","OH","OK","OR","PA","RI","SC","SD","TN","TX","UT","VT","VA","WA","WV","WI","WY")
 
@@ -252,45 +252,164 @@ for (i in states_list){
   data_x <- subset(data_state,state==i)
   model <-lm(state_model,data_state)
   
-  # new_data <- subset(data_state, state==i & year == 2020)
-  result[states_list == i, 2:3] <- predict(state_model, newdata = new_data)
+  new_data1 <- subset(new_data, states_list==i)
+  result[states_list == i, 2:3] <- predict(model, newdata = new_data1)
 }
 
 result
 
 
-# State Prediction Interval
+# Trial for state Alabama
 
+result1 <- data.frame(state = states_list, predict_lower_bound = rep(NA, length(states_list)), predict_higher_bound = rep(NA,length(states_list)), fit = rep(NA,length(states_list)))
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-predict_function <- function(s){
-  s_glm_covid <- state_model
+for (i in states_list){
+  data_x1 <- subset(data_state,state==i)
+  model1 <-lm(state_model,data_state)
   
-  Scovid <- day7_covid_rates %>%
-    filter(state == s)
-  
-  state_prediction <- predict(s_glm_covid, Scovid)
+  new_data2 <- subset(new_data, states_list==i)
+  result[states_list == i, 2:3] <- predict(model, newdata = new_data1)
 }
 
-# loop through all the states
-for (s in states_list){
-  state_prediction <- predict_function(s)
-  states_predictions$predictions[states_predictions$state == s] <- state_prediction
+result
+
+
+#### Function 
+
+predict_function <- function(i){
+
+trial <- data_state %>%
+  filter(state==i)
+
+trial_model <- glm(D_pv2p~avg_support + growth_rate + GDP_growth_qt ,data=trial)
+summary(trial_model)
+
+predict(trial_model, newdata = new_Data_trial)
+
+}
+
+for (i in states_list){ state_prediction <- predict_function(i) 
+result1$fit[result1$state == i] <- state_prediction}
+
+result1
+
+
+# Weighted Ensamble with Loop Functions
+
+new_data <- new_data %>%
+  rename("state"=states_list)
+
+states_predictions <- data.frame(state = states_list, predict_lower_bound = rep(NA, length(states_list)), predict_higher_bound = rep(NA,length(states_list)), fit = rep(NA,length(states_list)))
+
+# The Model
+
+poll_glm <- function(i){
+  ok <- data_state %>%
+    select(state,year,avg_support,D_pv2p,party) %>%
+    filter(state == i) 
+  glm(D_pv2p~ avg_support,data=ok)
+}
+
+econ1_glm <- function(i){
+  ok <- data_state %>%
+    select(state,year,growth_rate,D_pv2p,party) %>%
+    filter(state == i) 
+  glm(D_pv2p~growth_rate,data=ok)
+}
+
+econ2_glm <- function(i){
+  ok <- data_state %>%
+    select(state,year,GDP_growth_qt,D_pv2p,party) %>%
+    filter(state == i) 
+  glm(D_pv2p~GDP_growth_qt ,data=ok)
+}
+
+predict_function <- function(i){
+  s_glm_econ1 <- econ2_glm(i)
+  s_glm_poll <- poll_glm(i)
+  s_glm_econ2 <- econ1_glm(i)
+  
+  Spoll <- new_data %>%
+    select(state,avg_support)
+  
+  
+  S_GDP <- new_data %>%
+    select(state,GDP_growth_qt)
+
+  
+  S_fed <- new_data %>%
+    select(state,growth_rate)
+
+  
+  state_prediction <- 0.92*predict(s_glm_poll,Spoll) + 
+    0.02*predict(s_glm_econ1,S_fed) + 0.06*predict(s_glm_econ2,S_GDP) 
   
 }
+
+# loop through all states
+for (i in states_list){
+  state_prediction <- predict_function(i)
+  states_predictions$fit[states_predictions$state == i] <- state_prediction
+}
+
+states_predictions
+
+
+
+
+# Connecting with the Electoral College
+
+  # Reading in Electoral College data 
+
+gs4_deauth()
+electoral_college <- read_sheet("https://docs.google.com/spreadsheets/d/1nOjlGrDkH_EpcqRzWQicLFjX0mo0ymrh8k6FaG0DRdk/edit?usp=sharing") %>%
+  slice(1:51) %>%
+  select(state, votes)
+
+electoral_college$state <- state.abb[match(electoral_college$state, state.name)]
+
+# Merging with predictons
+
+pred <- states_predictions %>%
+  left_join(electoral_college) 
+
+pred1 <- pred %>%
+  mutate(dem_win = ifelse(fit > 48, votes, 0)) %>%
+  mutate(rep_win = ifelse(fit < 48, votes, 0)) %>%
+  mutate(rep_ec = sum(rep_win)) %>%
+  mutate(dem_ec = sum(dem_win))
+
+pred1
+
+
+# MAP
+
+
+map <- ggplot(predictions$dem_ec, aes(long, lat, group = group)) +
+  geom_polygon(aes(fill = dem_ec), color = "black") +
+  scale_fill_gradient2(
+    high = "red2", 
+    mid = "white",
+    name = "win margin",
+    low = "dodgerblue2", 
+    breaks = c(-50,-25,0,25,50), 
+    limits=c(-52,52)
+  ) +
+  theme_void()  
+
+# Adding state abbreivations 
+
+centroids <- data.frame(region=tolower(state.name), long=state.center$x, lat=state.center$y)
+centroids$abb<-state.abb[match(centroids$region,tolower(state.name))]
+
+
+
+
+
+
+
+
+
 
 
 
