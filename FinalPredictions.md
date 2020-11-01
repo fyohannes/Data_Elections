@@ -79,6 +79,14 @@ I think controlling for the conservative lean did help;however, my model still p
 
 My state by state model predicted that Biden would win the electoral college with 271 votes, just barely over the 270 threshold. In this model, Trump was predicted to win 264 votes. This outcome, shows that the election will be highly competitive, with the electoral college being highly more competive than the popular vote.
 
+![Win Margin](Electoral_Map.png)
+
+
+![Electoral College](Electoral_Map2.png)
+
+
+
+
 The above graphics show predicted democratic win margins for reach state, as well as predicted electoral college outcomes. The first graph shows that the very few states are hardcore blue or red states, as most of the states are colored white, showing that they are quite competitive. The second graph depicts electoral college outcomes, with a Trump win denoted as red and a Biden win denoted as blue. 
 
 If I were to cateogirze Colorado and New Hampshire as blue states, rather than red, than the total number of electoral votes for Biden would be 284 (Colorado is 9 electoral votes and New Hampshire is 4) and 251 votes for Trump. Given that overwhelmng data, poll support and historical data, show that these two states will lean left this election, my final elecotral prediction is 284 votes for Biden and 251 for Trump.
