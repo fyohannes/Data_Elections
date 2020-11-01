@@ -64,14 +64,27 @@ After calculating the popular vote share for Trump, I then calculated a predicti
 
 **<font size="3"> State by State Predictions </font>**
 
+Along with my national model, I also conducted a state by state model to predict vote shares and electoral college outcomes in 2020. My state by state model looked very similiar to my national model as it still used average poll support, GDP growth, and change in federal spending. However, rather than conducting a multivaraite regression with all three variables weighted equally, I decided to create a weighted ensemble. I decided to create a weighted ensemble rather than a mutlivariate regression becuase of some of the missing data that existed on the state level. I attempted to do a multi-variable regression, but found that the outcomes were not realisitc at all (ie MA with a democratic vote share of 35 percent). While, my national and state by state models use different methods to calculate outcome, they still use the same variables, and thus are consistent in that regard.
+
+In this weighted ensemble, I assigned poll support a weight of 0.92 percent, assigned change in federal spending a weight of 0.02, and GDP growth a weight of 0.06. While these weights were somewhat arbitrary, I wanted to create an ensemble that heavily favored poll support because of the overwhelming predictive power that poll support has. Additionally, after determing the weight for poll support, I wanted to weight GDP growth more than federal spending because previous regression models showed that GDP growth was a more important fundamental predictive variable.
 
 
 **<font size="2"> State by State Model </font>**
 
+Through the weighted ensemble, I was able to predict vote shares for each state. Some things that initially stook out to me was how this model seemed to lean quite republican. This somewhat makes sense, as my model predictor variables such as GDP growth from Q4 2019 and federal spending, were all variables that would help the incumbent Donald Trump (given the positive numbers that were imputed into the model). Despite over-weighting poll support, the economic variables that I used could have still resulted in the model leaning on the republican side. Since my model leaned to heavily on the republican side than I thought was appropriate, I categorized a democratic win as winning a state if they recieve more than 48 percent of the popular vote rather than 50. While, this was not part of my original model, I thought it was necessary to control for the overhwelming lean to the conservative side.
+
+I think controlling for the conservative lean did help;however, my model still predicted Colorado and New Hampshire, two states that are highly predicted to be blue states in 2020, as red states. This was a bit concerning, so I decided to predict the electoral college with Colorado and New Hampshire as red states as the model predicts as well as predict the electoral college with those two states as blue states, which I think is much more realistic. 
+
+**<font size="2"> State by State Outcome </font>**
+
+My state by state model predicted that Biden would win the electoral college with 271 votes, just barely over the 270 threshold. In this model, Trump was predicted to win 264 votes. This outcome, shows that the election will be highly competitive, with the electoral college being highly more competive than the popular vote.
+
+The above graphics show predicted democratic win margins for reach state, as well as predicted electoral college outcomes. The first graph shows that the very few states are hardcore blue or red states, as most of the states are colored white, showing that they are quite competitive. The second graph depicts electoral college outcomes, with a Trump win denoted as red and a Biden win denoted as blue. 
+
+If I were to cateogirze Colorado and New Hampshire as blue states, rather than red, than the total number of electoral votes for Biden would be 284 (Colorado is 9 electoral votes and New Hampshire is 4) and 251 votes for Trump. Given that overwhelmng data, poll support and historical data, show that these two states will lean left this election, my final elecotral prediction is 284 votes for Biden and 251 for Trump.
 
 
-
-**<font size="2"> State by State Predictions</font>**
+**<font size="2"> State by State Model </font>**
 
 
 
