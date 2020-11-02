@@ -94,6 +94,14 @@ If I were to cateogirze Colorado and New Hampshire as blue states, rather than r
 
 **<font size="2"> State by State Model </font>**
 
+When conducting a predicitive confidence interval on my model, I found that the lower and upper bounds of my predictions ranged from -3 to 7 (-3 implying 3 fewer votes for Biden and 7 implying 7 more votes for Biden). The predicitive confidence intervals tell us that there's a 95 percent chance that the true value will lie anymore between those bounds.For example, Massachusetts had a predicted vote share 59.1 percent for Biden and the lower bound was -1.5, while the upper bound was around 4.8. From this, we can gather that there's a 95 percent chance that Massachusetts' vote share for Biden will be between 57.6 and 63.9.
+
+
+
+
+
+The graph above models the predicitive confidence interval for all of the states.
+
 
 
 
@@ -107,9 +115,6 @@ Furthermore, this election is unlike any other. COVID-19 has greatly changed the
 
 
 **<font size="3"> Sources</font>**
-
-
-[Data source for GDP data](https://www.bea.gov/news/2020/gross-domestic-product-fourth-quarter-and-year-2019-advance-estimate#:~:text=Real%20gross%20domestic%20product%20(GDP,real%20GDP%20increased%202.1%20percent)
 
 [Data source federal spending data](https://www.cbo.gov/publication/56324)
 
