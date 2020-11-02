@@ -104,7 +104,7 @@ When conducting a predictive confidence interval on my model, I found that the l
 The table above displays each state's predicted vote share for Biden and the respective predictive confidence intervals. The predictive confidence intervals seem to have a larger upper bound rather than lower, which perhaps can tell us that there's a higher probability that the true popular share values are in Biden's favor rather than Trump.
 
 
-**<font size="3"> Some Limitations of the Model </font>**
+**<font size="2"> Some Limitations of the Model </font>**
 
 There are many limitations to the aforementioned models. My national model is focused on economic fundamentals and polls, two variables that have historically been a good predictor of national outcomes. Not using other predictor variables such as campaign spending or advertisements may inhibit my model somewhat; however, based on previous blog posts, it seemed like fundamentals and polls were better predictor variables. Thus, while not including dynamic variables, may somewhat inhibit my model, I still believe the model that I created is a good fit for the data.
 
