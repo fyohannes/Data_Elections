@@ -92,18 +92,17 @@ The above graphics show predicted democratic win margins for reach state, as wel
 If I were to cateogirze Colorado and New Hampshire as blue states, rather than red, than the total number of electoral votes for Biden would be 284 (Colorado is 9 electoral votes and New Hampshire is 4) and 251 votes for Trump. Given that overwhelmng data, poll support and historical data, show that these two states will lean left this election, my final elecotral prediction is 284 votes for Biden and 251 for Trump.
 
 
-**<font size="2"> State by State Model </font>**
+**<font size="2"> Investigating the State by State Model Further </font>**
 
 When conducting a predicitive confidence interval on my model, I found that the lower and upper bounds of my predictions ranged from -3 to 7 (-3 implying 3 fewer votes for Biden and 7 implying 7 more votes for Biden). The predicitive confidence intervals tell us that there's a 95 percent chance that the true value will lie anymore between those bounds.For example, Massachusetts had a predicted vote share 59.1 percent for Biden and the lower bound was -1.5, while the upper bound was around 4.8. From this, we can gather that there's a 95 percent chance that Massachusetts' vote share for Biden will be between 57.6 and 63.9.
 
+![Final Table 1](finaltable1.png)
+![Final Table 2](finaltable2.png)
+![Final Table 3](finaltable3.png)
+![Final Table 4](finaltable4.png)
 
 
-
-
-The graph above models the predicitive confidence interval for all of the states.
-
-
-
+The table above displays each state's predicted vote share for Biden and the respective predicitive confidence intervals. The predicitive confidence intervals seems to have a larger upper bound rather than lower, which perhaps can tell us that there's a higher probability that the true popular share values are in Biden's favor rather than Trumps.
 
 
 **<font size="3"> Some Limitations of the Model </font>**
