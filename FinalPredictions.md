@@ -30,7 +30,7 @@ The last variable that I used was poll support averages. I used all poll data, r
 
 **<font size="2"> The Model </font>**
 
-As I've mentioned the national model uses GDP growth, federal spending, and poll support to predict election outcomes. 
+As I've mentioned, the national model uses GDP growth, federal spending, and poll support to predict election outcomes. 
 
 
 ![National Model Summary](Screen Shot 2020-10-30 at 10.40.07 PM.png)
