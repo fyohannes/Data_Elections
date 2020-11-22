@@ -18,7 +18,14 @@ _**<font size="2"> November 23rd 2020 </font>**_
 
 **<font size="3"> Accurracy of my Models </font>**
 
-In order to determine the accuracy of my models, I first compared my model's predictions with the actual election outcomes.
+
+In order to determine the accuracy of my models, I first compared my model's predictions with the actual election outcomes, particulary the electoral college.
+
+
+![Electoral College](actual_map.png)
+
+
+By comparing the electoral college map of the actual outcome with my model predcitions, one would see that my model incorrectly predicted Virgina, Arizona, Georgia
 
 
 ![Popular Vote difference ](PV_difference.png)
