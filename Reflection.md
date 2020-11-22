@@ -21,7 +21,7 @@ With these predictive variables, I created two models, one model to predict the 
 ![Electoral College](Electoral_Map2.png)
 
 
-The map above shows the predicted outcome of the election from my model. As I noted in my previous blog post, although my model designated Colorado and New Hampshire as red states, I altered my model specifications, and deemed them blue states. Some interesting results from this prediction model include my model predicitng Pennsylavnia as a blue state, but Arizona as a red state. Thus, showing how my model struggled to accurately predict all of the swing states.
+The map above shows the predicted outcome of the election from my model. As I noted in my previous blog post, although my model designated Colorado and New Hampshire as red states, I altered my model specifications, and deemed them blue states. Some interesting results from this prediction model include my model predicitng Pennsylavnia as a blue state, but Arizona as a red state. Thus, showing how my model struggled to accurately predict all of the swing states. Overall my model predicted that Biden would get 284 electoral votes and Trump would get 251 votes.
 
 
 **<font size="3"> Accurracy of my Models </font>**
@@ -47,9 +47,11 @@ I used this same tactic for blue states and then compared my findings to each ot
 
 ![Popular Vote difference ](PV_difference_democrats.png)
 
-The graph above shows the difference in popular vote differences between my model and the election outcome for each democratic state. Similiar to the graph for republican states, the positive/negative value of the difference indicates whether the vote was underestimated or overestimated. If the difference was positive, I underestimated Biden's vote share and if it was negative, I overestimated Biden's vote share. The only two states in which I overestimated Biden's vote share included 
+The graph above shows the difference in popular vote differences between my model and the election outcome for each democratic state. Similiar to the graph for republican states, the positive/negative value of the difference indicates whether the vote was underestimated or overestimated. If the difference was positive, I underestimated Biden's vote share and if it was negative, I overestimated Biden's vote share. The only state that my model overestimated the Biden popular vote was New York;however, all other states were underestimated. My model especially underestimated Vermont, California, and Maryland. My model predicted a Biden popular vote share of 52.44 percent for California, 54.77 percent for Maryland, and 54.3 perent for Trump. The election outcome showed that Biden's popular vote for California was 65.25 percent, 66.46 percent for Maryland, and 68.3 percent for Vermont. Thus similiar to red states, my model under-estimated the vote share for the respective winner of that state, in this case Biden.
 
+I also calculated the average difference for blue states and it was 6.4, which is about 4 points higher than the average difference for red states. Thus, I tended to under-estimate Biden's popular vote shares more than Trump's. However, the graph depicting the difference in Trump votes, show that more variation. Thus, while I may have had a smaller average difference for these red states, part of it could be attributed to the negative difference values that represent me over-estimating Trump's share. When comparing these two graphs, one can see that for states in which the model underestimated the respective vote, whether it be Biden or Trump, the difference between predicted and actual outcomes, were much higher for red states. 
 
+This plays into the larger story of the underestimation of the Trump vote in these red states that we saw this election. Many models also under-estimated Trump's vote share in some of these states. I think this quite interesting, especially in regards to my model, because my model tended to grealty underestimate Trump's vote share in key red strongholdings, but also predicted a more contested electoral race than what actually occurred. As I've said before my model predicted that Trump would recieve 251 electoral votes adn Biden would recieve 284 electoral votes. The 2020 election results showed that Trump recieved 232 electoral votes and Biden 306 votes. 
 
 
 
