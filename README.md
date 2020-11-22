@@ -21,3 +21,5 @@ Whenever you commit to this repository, GitHub Pages will run [Jekyll](https://j
 [08.Shocks](Shocks.md)
 
 [09.Final Predictions](FinalPredictions.md)
+
+[10.Reflection](Reflection.md)
