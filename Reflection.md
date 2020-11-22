@@ -8,13 +8,22 @@ _**<font size="2"> November 23rd 2020 </font>**_
 
 
 
+![Electoral College](Electoral_Map2.png)
 
 
-![2000 and 2004](ad_issues_00_04.png)
+
+
 
 
 
 **<font size="3"> Accurracy of my Models </font>**
+
+In order to determine the accuracy of my models, I first compared my model's predictions with the actual election outcomes.
+
+
+![Popular Vote difference ](PV_difference.png)
+
+In the graph above, 
 
 
 
