@@ -24,26 +24,33 @@ With these predictive variables, I created two models, one model to predict the 
 The map above shows the predicted outcome of the election from my model. As I noted in my previous blog post, although my model designated Colorado and New Hampshire as red states, I altered my model specifications, and deemed them blue states. Some interesting results from this prediction model include my model predicitng Pennsylavnia as a blue state, but Arizona as a red state. Thus, showing how my model struggled to accurately predict all of the swing states.
 
 
-
-
-
-
-
 **<font size="3"> Accurracy of my Models </font>**
 
-
+My model did accurately predict the outcome of the elction, in terms of the victor of the election as my model did predict that Joe Biden would win. 
 In order to determine the accuracy of my models, I first compared my model's predictions with the actual election outcomes, particulary the electoral college.
 
 
 ![Electoral College](actual_map.png)
 
 
-By comparing the electoral college map of the actual outcome with my model predcitions, one would see that my model incorrectly predicted Virgina, Arizona, Georgia
+By comparing the electoral college map of the actual outcome with my model predcitions, one would see that my model incorrectly predicted Virgina, Arizona, Georgia,Iowa,Nevada,and New Mexico. Besides Iowa, my model predicted that these states were red, when in reality they were actually blue. I was actually surprised that my model predicted Nevada and New Mexico as red states, as they're generally blue states. However, I am less shocked that my model predicted Arizona and Georgia incorrectly (especially Georgia), as it truly could have gone wither way.
+
+In addition to comparing electoral colleges with my model and the actual outcome, I also compared popular vote differences. I prrticulary examined how well my model predicted popular vote shares for republican states in comparison to democratic states. 
 
 
-![Popular Vote difference ](PV_difference.png)
+![Popular Vote difference ](PV_difference_republicans.png)
 
-In the graph above, 
+The graph above shows the differene in popular vote differences between my model and the election outcome for each republican state. If the difference was positive, that meant that my model underestimated the vote share for Trump, and in reality he actually recieved more votes that the prediction). If the difference was negative, my model overestimated the vote share for Trump and he actually reieved less votes. This graph generally shows that my model underestimated the amount of votes that Trump would win in these red states. Furthermore, some states really stood out to me, including West Virgina,Wyoming, and Alabama, three states that are very much underestimated. My model predicted that Trump would recieve 51.3 percent of the vote in West Virgina, 65.16 for Wymoing, and 57.25 percent for Alabama. In reality Trump recieved 69.86 percent of the popular vote in West Virgina, 72.48 percent in Wyoming, and 63 percent in Alabama. I also caculated the average difference in the popular vote between my model and the election outcome for red states which was 2.67.
+
+I used this same tactic for blue states and then compared my findings to each other.
+
+
+Some states that really jumped out to me included Massachusetts, Vermont, Wyoming, and Idaho. My model underestimated Biden's 
+
+
+![Popular Vote difference ](PV_difference_democrats.png)
+
+The graph above shows the difference in popular vote differences between my model and the election outcome for each democratic state. Similiar to the graph for republican states, the positive/negative value of the difference indicates whether the vote was underestimated or overestimated. If the difference was.
 
 
 
