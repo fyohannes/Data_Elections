@@ -45,12 +45,9 @@ The graph above shows the differene in popular vote differences between my model
 I used this same tactic for blue states and then compared my findings to each other.
 
 
-Some states that really jumped out to me included Massachusetts, Vermont, Wyoming, and Idaho. My model underestimated Biden's 
-
-
 ![Popular Vote difference ](PV_difference_democrats.png)
 
-The graph above shows the difference in popular vote differences between my model and the election outcome for each democratic state. Similiar to the graph for republican states, the positive/negative value of the difference indicates whether the vote was underestimated or overestimated. If the difference was.
+The graph above shows the difference in popular vote differences between my model and the election outcome for each democratic state. Similiar to the graph for republican states, the positive/negative value of the difference indicates whether the vote was underestimated or overestimated. If the difference was positive, I underestimated Biden's vote share and if it was negative, I overestimated Biden's vote share. The only two states in which I overestimated Biden's vote share included 
 
 
 
