@@ -40,15 +40,17 @@ In addition to comparing electoral colleges with my model and the actual outcome
 
 ![Popular Vote difference ](PV_difference_republicans.png)
 
-The graph above shows the differene in popular vote differences between my model and the election outcome for each republican state. If the difference was positive, that meant that my model underestimated the vote share for Trump, and in reality he actually recieved more votes that the prediction). If the difference was negative, my model overestimated the vote share for Trump and he actually reieved less votes. This graph generally shows that my model underestimated the amount of votes that Trump would win in these red states. Furthermore, some states really stood out to me. 
+The graph above shows the differene in popular vote differences between my model and the election outcome for each republican state. If the difference was positive, that meant that my model underestimated the vote share for Trump, and in reality he actually recieved more votes that the prediction). If the difference was negative, my model overestimated the vote share for Trump and he actually reieved less votes. This graph generally shows that my model underestimated the amount of votes that Trump would win in these red states. Furthermore, some states really stood out to me, including West Virgina,Wyoming, and Alabama, three states that are very much underestimated. My model predicted that Trump would recieve 51.3 percent of the vote in West Virgina, 65.16 for Wymoing, and 57.25 percent for Alabama. In reality Trump recieved 69.86 percent of the popular vote in West Virgina, 72.48 percent in Wyoming, and 63 percent in Alabama. I also caculated the average difference in the popular vote between my model and the election outcome for red states which was 2.67.
 
-The average difference in the popular vote between my model and the election outcome for red states was 2.67.
+I used this same tactic for blue states and then compared my findings to each other.
 
 
 Some states that really jumped out to me included Massachusetts, Vermont, Wyoming, and Idaho. My model underestimated Biden's 
 
 
 ![Popular Vote difference ](PV_difference_democrats.png)
+
+The graph above shows the difference in popular vote differences between my model and the election outcome for each democratic state. Similiar to the graph for republican states, the positive/negative value of the difference indicates whether the vote was underestimated or overestimated. If the difference was.
 
 
 
