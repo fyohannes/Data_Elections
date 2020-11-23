@@ -68,11 +68,12 @@ Another proposed test that I could conduct, could include changing the weights o
 
 **<font size="3"> What would I change </font>**
 
-If I could conduct a new model 
+If I could conduct a new model, I would have conducted the GDP average growth variable that I mentioned earlier and would have included some new variables in my chain weight. One variable that I wish I included was a variable that measured demographic shift, as this turned out to be key in some states in Arizona. Granted, demographic variables are not always the best indicators. For example, a shift in the percentage of Latino voters is assumed to help the democrat vote, but as we saw in Miami, Florida, many Latinos voted for Trump. However, this may be because certain ethnicities within the umbrella term Latino are more likely to vote Republican or Democrat. Latinos in Miami are mostly Cuban, which is very unlike the ethnic makeup of Latinos in Arizona, thus perhaps using more percise demographic shifts by ethncities could be useful. In additon to the use of demographic data for Latinos, other useful demograohic variables include shift in the female and black population. Both of these varaibles could tell us important information on any possible changes for the Democratic vote. This is particualry true, as this election saw that almost 90 percent of black women voted for Joe Biden, thus showing strong evidence of the predictive power of demograhic data for black individauls in particular. 
 
-
-
+With the inclusion of demographic data, I would decrease the weight that I had for poll support from 90 percent to around 75-80 percent, weighing my other variables more. I also would have changed the poll data that I used from the last 9 weeks to the last 6 weeks just to get data that was more current and up to date. Overall, I wouldn't change the actual variables that I used because I think poll data and economic fundamentals are important, but I would change the way in which I used them and also would include demographic variables.
 
 
 
 **<font size="3"> Conclusion </font>**
+
+As many people have already noted this election was anything but typical. There were so many unknowns that made predicting this election particulary difficult. While, my model did not accurately predict each state, I think it did a decent job overall. I think with the changes that I noted earlier, the model could have done a better job predicting the outcome of the 2020 election. Generally, I found this experience to be an interesting way to apply data skills to a real world project, while also learning so much about a very important American election!
