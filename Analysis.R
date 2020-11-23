@@ -55,36 +55,66 @@ merged <- states_predictions %>%
 
 merged_1 <-merged %>%
   mutate(R_pv2p= R_pv2p * 100) %>%
-  mutate(difference = R_pv2p - fit)
+  mutate(D_pv2p= D_pv2p * 100) %>%
+  mutate(fit2= 100- fit) %>%
+  mutate(rdifference= R_pv2p-fit2) %>%
+  mutate(d_difference=D_pv2p-fit)
 
 # Making a graph 
 
 # Mutate to get colors for graph
 
 merged_1 <-  merged_1 %>%
-  mutate(Color = ifelse(difference > 0, "red", "blue")) 
+  mutate(Color = ifelse(D_pv2p> R_pv2p, "blue", "red")) 
+
+# Republican graph 
 
 merged_1 %>%
-  ggplot(aes(x=state,y=difference,fill=Color)) +geom_col() +
-  scale_fill_manual(labels=c("Democrat", "Republican"), values = c("blue", "red")) + 
-  labs(title ="Difference in Popular Vote",
+  filter(Color=="red") %>%
+  ggplot(aes(x=state,y=rdifference,fill="red")) +geom_col() +
+  labs(title ="Difference in Popular Vote for Republican States",
        subtitle="Comparing my Model with the Election Outcome",
        x="State Abbreviations",y= "Difference in Popular Vote (%)") +
-  labs(fill = "Party") +
+  theme(legend.position = "none") +
   theme(plot.title = element_text(face = "bold",size=30))+
   theme(plot.subtitle = element_text(face = "bold",size=29)) +
   theme(plot.caption =element_text(face = "bold",size=27))+
-  theme(axis.title.x = element_text(size = 25),
+  theme(axis.title.x = element_text(size = 30),
         axis.title.y = element_text(size = 30)) +
   theme(
     legend.title = element_text(color = "black", size = 29),
     legend.text = element_text(color = "black", size = 29)
   ) +
-  theme(axis.text.x = element_text(color = "black", size = 26, hjust = .5, angle= 45, vjust = .5, face = "plain"),
+  theme(axis.text.x = element_text(color = "black", size = 24, hjust = .5, angle= 20, vjust = .5, face = "plain"),
         axis.text.y = element_text(color = "black", size = 26, angle = 0, hjust = 1, vjust = 0, face = "plain")) 
 
 
-ggsave("PV_difference.png", height = 13, width = 21)
+ggsave("PV_difference_republicans.png", height = 13, width = 28)
+
+
+# Democrat graph 
+
+merged_1 %>%
+  filter(Color=="blue") %>%
+  ggplot(aes(x=state,y=d_difference)) +geom_col(fill="mediumblue") +
+  labs(title ="Difference in Popular Vote for Democratic States",
+       subtitle="Comparing my Model with the Election Outcome",
+       x="State Abbreviations",y= "Difference in Popular Vote (%)") +
+  theme(legend.position = "none") +
+  theme(plot.title = element_text(face = "bold",size=30))+
+  theme(plot.subtitle = element_text(face = "bold",size=29)) +
+  theme(plot.caption =element_text(face = "bold",size=27))+
+  theme(axis.title.x = element_text(size = 30),
+        axis.title.y = element_text(size = 30)) +
+  theme(
+    legend.title = element_text(color = "black", size = 29),
+    legend.text = element_text(color = "black", size = 29)
+  ) +
+  theme(axis.text.x = element_text(color = "black", size = 24, hjust = .5, angle= 20, vjust = .5, face = "plain"),
+        axis.text.y = element_text(color = "black", size = 26, angle = 0, hjust = 1, vjust = 0, face = "plain")) 
+
+
+ggsave("PV_difference_democrats.png", height = 13, width = 28)
 
 
 
@@ -94,17 +124,51 @@ merged_1$difference<- as.numeric(merged_1$difference)
 
 merged_1 %>%
   filter(Color=="red") %>%
-  summarize(Mean=mean(difference))
+  mutate(rdifference=abs(rdifference)) %>%
+  summarize(Mean=mean(rdifference))
 
 merged_1 %>%
   filter(Color=="blue") %>%
-  summarize(Mean2=mean(difference))
+  mutate(d_difference=abs(d_difference)) %>%
+  summarize(Mean2=mean(d_difference))
 
 
 
-# Republicans-- 15.8639, Democrats-- 10.9319
+# Republicans-- 15.8639, Democrats-- 6.379644
 
 
 #Finding the standard error 
+
+
+
+# Real Election Electoral College Results 
+
+# New data frame 
+
+map_prediction_dataframe_new <- merged_1 %>%
+  mutate(D_pv2p= D_pv2p * 100) %>%
+  mutate(win_margin = (D_pv2p -R_pv2p)) %>%
+  mutate(dem_win = ifelse(win_margin >= 0, TRUE, FALSE))
+
+ggplot(map_prediction_dataframe_new, aes(state = state, fill =dem_win)) + 
+  geom_statebins(lbl_size = 10) + 
+  theme_statebins() +
+  scale_fill_manual(values=c("#F8766D","#619CFF")) +
+  labs(title = "2020 Presidential Electoral College Map- Real Outcomes",
+       fill = "") + 
+  theme(plot.title = element_text(size = 38, hjust = 0.5),
+        plot.subtitle = element_text(size = 32, hjust = 0.5)) +
+guides(fill=FALSE)
+
+
+ggsave("actual_map.png", height = 16, width = 22)
+
+
+# Residual Graph 
+
+res_popular <- qplot(fitted(national_model), resid(national_model),size=I(11)) +
+  geom_smooth()
+res_popular+geom_hline(yintercept=0) 
+
 
 
