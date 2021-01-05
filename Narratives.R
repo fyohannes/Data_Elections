@@ -1,4 +1,4 @@
-# Narratives
+# Narratives--- Black Mobilization in Georgia n
 
 # Packages
 
@@ -30,3 +30,5 @@ library(gt)
 # For the regression summary table 
 
 library(tidyverse)
+
+
