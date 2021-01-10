@@ -24,16 +24,24 @@ In order to fully understand the impact of Abrams work on the 2020 election, I t
 
 ![2016 Black Counties](2016_most_black_counties.png)
 
-The graph above shows 7 Georgia counties with the greatest black population. The county with the greatest black population is Fulton county, with a 
+The graph above shows 7 Georgia counties with the greatest black population. The county with the greatest black population is Fulton county, with a population of over 450,000 in a county with a total population of just over a million. DeKalb county is the county with the second greatest black population with around 410,000 black people in a county if almost 750,000. Counties such as Gwinnett and Cobb have over 200,000 black residents and counties, Chatham, Clayton, and Richmond have over 100,000 black residents. 
 
-
+In trying to understand the relationship between county/voter demographics and vote share, understanding the racial makeup of counties will be key.
 
 
 **<font size="2"> Election Results </font>**
 
+In 2016, Trump defeated Hiliary Clinton by a margin of close to 5 percent. Donald Trump recieved around 2,089,000 votes, while Clinton recieved around 1,870,000 votes. While Trump did win by a fair margin, it is important to note that this race was much closer than the 2012 Presidential elections in which Romney won by almost 8 percent. Already, one can start seeing a shift in Presidential Elections in Gerogia as Democratic candidates are winning more votes. Thus, this shows a trend of Gerogia incrementally turning blue, while still remaining a strong Republican state ( at least in 2016)
 
 
 ![2016 Results](2016_Georgia_Vote.png)
+
+
+The graph is a map that shows the Presidential election results for each county in 2016. The majority of counties clearly voted for Republicans (as depicted in the overwhelming red color throughout the map), but it is important to note that the counties that are shown in blue (thus voting for Clinton) are counties with the some of the highest populations. These counties surround cities such as Atlanta, Columbus, Macon, Augusta, and Savannah. 
+
+
+Of the 159 counties that exist in Georgia, 
+
 
 
 ![2016 Most Democratic Counties](2016_most_democratic_counties.png)
