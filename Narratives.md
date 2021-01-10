@@ -40,34 +40,48 @@ In 2016, Trump defeated Hiliary Clinton by a margin of close to 5 percent. Donal
 The graph is a map that shows the Presidential election results for each county in 2016. The majority of counties clearly voted for Republicans (as depicted in the overwhelming red color throughout the map), but it is important to note that the counties that are shown in blue (thus voting for Clinton) are counties with the some of the highest populations. These counties surround cities such as Atlanta, Columbus, Macon, Augusta, and Savannah. 
 
 
-Of the 159 counties that exist in Georgia, 
-
-
+Of the 159 counties that exist in Georgia, 31 counties were blue, thus meaning the majority of the people voted for Cliton.
 
 ![2016 Most Democratic Counties](2016_most_democratic_counties.png)
 
 
 
+The graph above shows the counties with a Democratic win margin of over 25 percent. Some of these counties include
+
+
+
 **<font size="2"> Correlation between Demographics and Election Results </font>**
+
+In order to understand the effect of demographics on election results, I thought it would be important to grah the relationship between demographics and Democratic win margins.
 
 
 ![2016 Correlation Graph](2016_black_vote.png)
 
 
+The above graph does exactly that and specifcally investigates the correlation between the percentage of black people that reside in a county (number of black peole in a county/ total county population) and the county's Democratic vote share margin for the 2016 election. In the graph, one can see that as a county's black population increases so does it's Democratic win margin. This nearly linear relationship suggests that a county's demographic can have a large influence on the vote share, particulary with black voters and votes for the Democratic party. I will note, however, that this may not be entirely due to black voters, but also because in Georgia many black residents live in urban areas that already tend to lean towards the Democratic party anyways, for a variety of reasons. Thus, I won't go as far to say that this graph depicts a causual relationship, as I do not have enough data to prove that, but this graph is in line with the thought (that has been well studied and is even shown in my previous blog posts) that black voters tend to vote for the Democratic party.
+
 
 
 **<font size="3"> Georgia in the 2020 Election </font>**
 
+While Donald Trump won over 200,000 votes in the 2016 election, he now lost by a mere 11,000 votes in the 2020 election. Thus, in this election, Georgia turned blue. Joe Biden's Georgia win proposes many questions to which why Georgia shifted blue this election. Similiar to the analysis I did for the 2016 Presidential elections, I conducted the same analysis for the 2020 election.  
+
 
 **<font size="2"> Demographics </font>**
+
+The graph below shows the counties in Georgia with the highest black populations, using 2019 census data. The graph is exactly the same as the 2016 graph previously shown, thus, the demographics in this regard stayed relatively the same, besides the small increase in population for each county.
 
 ![2020 Black Counties](2020_most_black_counties.png)
 
 
 **<font size="2"> Election Results </font>**
 
+In this past election, Joe Biden won by 11,000 votes, a margin of just 0.23 percent. The election in Georgia was incredibly close and carried great significance as it marks the first time in modern politics in which Georgia was considered a swing state. Joe Biden's win signals a change in the political tide in Georgia, something that has most certainly carried over to the Senate elections, in which two Democratic senators won the election. 
+
 
 ![2020 Most Democratic Counties](2020_most_democratic_counties.png)
+
+In the 2020 election, 30 counties had a majority of votes for Democratic candidate, Joe Biden. 
 
 
 **<font size="2"> Correlation between Demographics and Election Results </font>**
