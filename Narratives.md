@@ -15,15 +15,18 @@ The work of Abrams and other organizers was incredibly significant in the 2020 e
 
 
 
-
-
-
 **<font size="3"> Georgia in the 2016 Election </font>**
+
+In order to fully understand the impact of Abrams work on the 2020 election, I thought it would first be important to analyze key characterisitcs of the 2016 election, from demographics to election results. 
 
 
 **<font size="2"> Demographics </font>**
 
 ![2016 Black Counties](2016_most_black_counties.png)
+
+The graph above shows 7 Georgia counties with the greatest black population. The county with the greatest black population is Fulton county, with a 
+
+
 
 
 **<font size="2"> Election Results </font>**
