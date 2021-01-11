@@ -129,11 +129,16 @@ Abrams's efforts will not only change the political landscape in Georgia, but wi
 **<font size="3"> Sources </font>**
 
 
-Demographic data: https://www.census.gov/data/datasets/time-series/demo/popest/2010s-counties-detail.html
 
-2020 county vote data: https://www.politico.com/2020-election/results/georgia/
+[Demographic data](https://www.census.gov/data/datasets/time-series/demo/popest/2010s-counties-detail.html)
 
-Information regarding Abrams : https://www.popsugar.com/news/how-stacey-abrams-helped-turn-georgia-blue-47947053
+
+[2020 county vote data](https://www.politico.com/2020-election/results/georgia/)
+
+[
+Information regarding Abrams](https://www.popsugar.com/news/how-stacey-abrams-helped-turn-georgia-blue-47947053)
+
+
 
 
 
