@@ -110,16 +110,9 @@ The graph above shows the difference in Democratic votes in counties with the hi
 ![2020 Counties Most Shift to Blue](final_graph_2.png)
 
 
-The graph above shows the top 10 counties with the largest increase in Democratic votes. Of the 159 counties, 158 counties saw an increase in Democratic votes in the 2020 election in comparison to the 2016 election. This is particularly significant because it shows a state wide shift. 
+The graph above shows the top 10 counties with the largest increase in Democratic votes. Of the 159 counties, 158 counties saw an increase in Democratic votes in the 2020 election in comparison to the 2016 election. This is particularly significant because it shows a state wide shift as the entire state is slowly becoming more blue.
 
-4 counties that particulary stand out are Cobb, Dekalb, Fulton, and Gwinnett county. These counties experienced an increase in Democratic votes by about 50,000-100,000 votes. Other counties such as Douglas and Clayton county experieneced an increase of about 10,0000-25,000 votes. Of these counties, DeKalb and Fulton are two counties that experienced the greatest increase in Democratic votes and they also are counties with a high percentage of black residents. 
-
-
-
-
-
-
-
+However, there are 4 counties that particulary stand out are Cobb, Dekalb, Fulton, and Gwinnett county. These counties experienced an increase in Democratic votes by about 50,000-100,000 votes. Other counties such as Douglas and Clayton county experieneced an increase of about 10,0000-25,000 votes. Of these counties, DeKalb and Fulton are two counties that experienced the greatest increase in Democratic votes, and they also are counties with a high percentage of black residents.  The total increase in democratic votes from these 10 counties amounted to 417,278, thus more than half of these votes came from majority black counties. 
 
 
 
