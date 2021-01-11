@@ -64,7 +64,7 @@ This is important to note as I will later investigate the shift in Democratic vo
 
 **<font size="3"> Georgia in the 2020 Election </font>**
 
-While Donald Trump won over **_200,000_** votes in the 2016 election, he now lost by a mere **_11,000**_ votes in the 2020 election. Thus, in this election, Georgia turned blue. Joe Biden's Georgia win proposes many questions as to which why Georgia shifted blue this election. Similar to the analysis I did for the 2016 Presidential elections, I conducted the same analysis for the 2020 election.  
+While Donald Trump won over **_200,000_** votes in the 2016 election, he now lost by a mere **_11,000_** votes in the 2020 election. Thus, in this election, Georgia turned blue. Joe Biden's Georgia win proposes many questions as to which why Georgia shifted blue this election. Similar to the analysis I did for the 2016 Presidential elections, I conducted the same analysis for the 2020 election.  
 
 
 **<font size="2"> Demographics </font>**
