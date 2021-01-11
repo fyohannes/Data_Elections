@@ -81,18 +81,25 @@ In this past election, Joe Biden won by 11,000 votes, a margin of just 0.23 perc
 
 ![2020 Most Democratic Counties](2020_most_democratic_counties.png)
 
-In the 2020 election, 30 counties had a majority of votes for Democratic candidate, Joe Biden. 
+In the 2020 election, 30 counties had a majority of votes for Democratic candidate, Joe Biden. Of these counties, Dekalb had a Democratic vote share of a little over 60 percent, Clayton had a Democratic vote share of over 70 percent, Fulton over 40 percent, and Hancock over 50 percent. It's important to note that these are large margins, thus highlighting how there are pockets of Democratic support in the traditionally Republican state.
 
 
 **<font size="2"> Correlation between Demographics and Election Results </font>**
 
+Similiar to the correlation graph for 2016, I wanted to create a graph with 2020 data to further emphasize the strong relationship between the number of black residents in a county and it's Democratic vote share.
 
 
 ![2020 Correlation Graph](2020_black_vote.png)
 
 
+This linear relationship further reflects that black counties primarily tend to vote Democratically, which is intergal in understanding the effect of Abrams efforts in this past election.
+
 
 **<font size="3"> Georgia Goes Blue </font>**
+
+Proving whether or not the work of activists in Georgia was the sole reason Georgia turned blue would be difficult because the data needed to prove causation does not exist. In order to prove that I would need data that shows the vote of every newly registered voter (due to the works of Abram and others) and with that calculate even Biden could have won without these new voters. Because that is nearly impossible, I chose to investigate demographic data in the 2016 and 2020 election as Abrams and other activists particualry tried to mobalize black voters. 
+
+F
 
 
 ![2020 Black Counties Difference](final_graph.png)
