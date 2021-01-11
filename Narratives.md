@@ -116,8 +116,11 @@ However, there are 4 counties that particulary stand out are Cobb, Dekalb, Fulto
 
 
 
-
 **<font size="3"> Who Deserves the Credit? What are the Effects of these GrassRoot Campaigns? </font>**
+
+The shift in the political landscape in Georgia has gradually occurred over time, with the state showing more support for Democratic candidates throughout the years. In 2012, Romney won by almost 8 percent, in 2016, Trump won by 5 percent, and finally in 2020, Biden won by a small margin of 0.23 percent. Clearly something is changing in Georgia. But what is it?
+
+
 
 
 
