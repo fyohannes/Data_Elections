@@ -99,13 +99,24 @@ This linear relationship further reflects that black counties primarily tend to 
 
 Proving whether or not the work of activists in Georgia was the sole reason Georgia turned blue would be difficult because the data needed to prove causation does not exist. In order to prove that I would need data that shows the vote of every newly registered voter (due to the works of Abram and others) and with that calculate even Biden could have won without these new voters. Because that is nearly impossible, I chose to investigate demographic data in the 2016 and 2020 election as Abrams and other activists particualry tried to mobalize black voters. 
 
-F
+First I wanted to look at the counties that had the largest increase in Democratic votes in the 2020 election in comparsion to the 2016 election. I wanted to do this because I wanted to analyze what counties could be responsbile for the shift in Georgia.
 
 
 ![2020 Black Counties Difference](final_graph.png)
 
+The graph above shows the difference in Democratic votes in counties with the highest black population. This graph shows that Fulton county had an increase in Democratic vote share by almost 100,000 votes.DeKalb had an increase in Democratic vote share by over 60,000 and Clayton county over 15,000. These numbers show a significant shift leaning in favor of the Democrats in these black counties. Although these counties were already blue, the increase by hundreds of thousands Democratic votes should not be forgetten especially because Biden won by a mere 11,000 votes. Across these 7 counties, the increase in Democratic votes in this past election was 225,378 votes.
+
 
 ![2020 Counties Most Shift to Blue](final_graph_2.png)
+
+
+The graph above shows the top 10 counties with the largest increase in Democratic votes. Of the 159 counties, 158 counties saw an increase in Democratic votes in the 2020 election in comparison to the 2016 election. This is particularly significant because it shows a state wide shift. 
+
+4 counties that particulary stand out are Cobb, Dekalb, Fulton, and Gwinnett county. These counties experienced an increase in Democratic votes by about 50,000-100,000 votes. Other counties such as Douglas and Clayton county experieneced an increase of about 10,0000-25,000 votes. Of these counties, DeKalb and Fulton are two counties that experienced the greatest increase in Democratic votes and they also are counties with a high percentage of black residents. 
+
+
+
+
 
 
 
