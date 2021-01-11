@@ -44,7 +44,7 @@ The graph is a map that shows the Presidential election results for each county 
 ![2016 Most Democratic Counties](2016_most_democratic_counties.png)
 
 
-The graph above shows the counties with a Democratic win margin of over 25 percent. Some of these counties include Dekalb (a Democratic win margin of over **_60_** percent), Clayton (over **_70_** percent), Hancock (over **_50_** percent), and Fulton county (over **_40**_ percent).
+The graph above shows the counties with a Democratic win margin of over 25 percent. Some of these counties include Dekalb (a Democratic win margin of over **_60_** percent), Clayton (over **_70_** percent), Hancock (over **_50_** percent), and Fulton county (over **_40_** percent).
 
 
 
