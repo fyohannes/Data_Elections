@@ -13,6 +13,8 @@ How did Georgia turn blue? Was it by chance? Was it beacause Republicans in Geor
 
 The work of Abrams and other organizers was incredibly significant in the 2020 election. It particualry highlights the imporatnce of voter demographics, whether it be race or age, in American elections. Voter demographics are pivotal in American politics and elections. Shifting voter demographics and efforts to capitalize on those shifts can completely change the political landscape. Thus, in my final blog post, I hope to test whether Georgia's shift to becoming a blue state can be credited to the works of Abrams and other activists. Through this I hope to investigate how changing vote demographics can affect Democratic strategies and their prospects in future elections. I also hope to further investigate the impact of the black vote in elections. What happens once policies for voter suppression are dismantled and black people are truly allowed to vote freely? This is a large question to tackle, but I believe looking at the Georgia election can help answer some of these questions.
 
+In this narrative post, I will analyze the shift and impact of the black vote by investigating Democratic vote shares in counties with a high percentage of black residents. While it will be hard to prove causation, if my data shows a large increase in the Democratic vote share in these counties, I will conclude that Abrams voter mobilization efforts, particulary in black counties, was effective and could be one of the reasons why Georgia turned blue this election. I want to clarify that I do not have sufficent data to prove that the efforts of activists are the sole reason why Georgia turned blue, but I hope to show whether or not these efforts had an impact in the 2020 election 
+
 
 
 **<font size="3"> Georgia in the 2016 Election </font>**
@@ -46,19 +48,21 @@ Of the 159 counties that exist in Georgia, 31 counties were blue, thus meaning t
 
 
 
-The graph above shows the counties with a Democratic win margin of over 25 percent. Some of these counties include
+The graph above shows the counties with a Democratic win margin of over 25 percent. Some of these counties include Dekalb (over 60 percent), Clayton (over 70 percent), Hancock (over 50 percent), and Fulton county (over 40 percent).
 
 
 
 **<font size="2"> Correlation between Demographics and Election Results </font>**
 
-In order to understand the effect of demographics on election results, I thought it would be important to grah the relationship between demographics and Democratic win margins.
+In order to understand the effect of demographics on election results, I thought it would be important to graph the relationship between demographics and Democratic win margins.
 
 
 ![2016 Correlation Graph](2016_black_vote.png)
 
 
 The above graph does exactly that and specifcally investigates the correlation between the percentage of black people that reside in a county (number of black peole in a county/ total county population) and the county's Democratic vote share margin for the 2016 election. In the graph, one can see that as a county's black population increases so does it's Democratic win margin. This nearly linear relationship suggests that a county's demographic can have a large influence on the vote share, particulary with black voters and votes for the Democratic party. I will note, however, that this may not be entirely due to black voters, but also because in Georgia many black residents live in urban areas that already tend to lean towards the Democratic party anyways, for a variety of reasons. Thus, I won't go as far to say that this graph depicts a causual relationship, as I do not have enough data to prove that, but this graph is in line with the thought (that has been well studied and is even shown in my previous blog posts) that black voters tend to vote for the Democratic party.
+
+This is important to note as I will later investigate the shift in Democratic votes in counties with a large population of black residents. Thus, this graph establishes that there seems to be a strong correlation between black counties and their vote for the Democratic party.
 
 
 
@@ -121,11 +125,19 @@ However, there are 4 counties that particulary stand out are Cobb, Dekalb, Fulto
 The shift in the political landscape in Georgia has gradually occurred over time, with the state showing more support for Democratic candidates throughout the years. In 2012, Romney won by almost 8 percent, in 2016, Trump won by 5 percent, and finally in 2020, Biden won by a small margin of 0.23 percent. Clearly something is changing in Georgia. But what is it?
 
 
+From my analysis above, one can see that there was a large increase in democratic votes throughout the country amounting to an increase of hundreds of thousands. Given the fact that Biden did not win Georgia by hundreds of thousands of votes, it would be fair to assume that there were also an increase in Republican votes as well. This makes sense given that this election saw the largest voter turnout in election history. However, in my analysis, I wanted to particular investigate the shift in Democratic vote shares in black counties in comparison to other counties with a large increase in Democratic vote shares. I found that black counties saw an increase in Democratic vote shares of over 200,000 votes. This may not be entirely due to Abrams effort, but given her work in these black communities, it is fair to assume that at least some of this is due to her efforts and others. Although I specirically looked at black counties, Abrams work extended beyond black communities, as she worked with other communities and young voters. Thus, the increase in Democratic votes in other counties (not the black counties previously mentioned) could also be due to her efforts. Of course, there is no way of knowing for sure. The increase in Democratic votes could be for a variety of reasons that do not include Abrams efforts. While we do not know if Biden would have one without her efforts (as we can never see the counterfactual) my data and analysis shows that is very plausible that Abrams is partially responsible for Georgia turning blue.
 
-
+Abrams efforts will not only change the political landscape in Georgia, but will also have a large impact on the Democratic party and political scene at large. It already has, as the state just elected to Democratic senators. This could also prompt the Democratic party to invest in other soon to be swing states in similiar vooter mobilization tactics.
 
 
 **<font size="3"> Sources </font>**
+
+
+Demographic data: https://www.census.gov/data/datasets/time-series/demo/popest/2010s-counties-detail.html
+
+2020 county vote data: https://www.politico.com/2020-election/results/georgia/
+
+Information regarding Abrams : https://www.popsugar.com/news/how-stacey-abrams-helped-turn-georgia-blue-47947053
 
 
 
